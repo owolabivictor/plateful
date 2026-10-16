@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | Plateful</title>
+    <link rel="icon" href="logo.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="js/data.js" defer></script>
+    <script src="js/modal.js" defer></script>
+    <script src="js/home.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-[#fafafa] font-['inter'] text-[#757575]">
+    <header
+      class="sticky top-0 z-[80] border-b border-b-[#e0e0e0] bg-[#fff] py-3 md:py-5"
+    >
+      <div
+        class="mx-auto flex w-full max-w-[1500px] items-center justify-between px-4 md:px-6"
+      >
+        <a
+          href="index.html"
+          class="outline-none focus:rounded-md focus:border-[#2e7d32] focus:ring-3 focus:ring-[#81c784]/30"
+        >
+          <div class="flex items-center justify-center gap-1 md:gap-2">
+            <img
+              src="logo.svg"
+              alt=""
+              class="size-[26px] shrink-0 md:size-[32px]"
+            />
+            <p
+              class="font-['Poppins'] text-xl font-[700] -tracking-[0.75px] text-[#2e7d32] md:text-2xl"
+            >
+              Plateful
+            </p>
+          </div>
+        </a>
+        <button
+          aria-label="open/close menu"
+          type="button"
+          class="inline-flex z-[90] cursor-pointer items-center justify-center lg:hidden"
+          id="button"
+        >
+          <ion-icon
+            name="menu-outline"
+            class="size-[34px] md:size-[38px]"
+            id="menu-btn"
+          ></ion-icon>
+          <ion-icon
+            name="close-outline"
+            class="hidden size-[34px] md:size-[38px]"
+            id="close-btn"
+          ></ion-icon>
+        </button>
+
+        <!-- Desktop Navigation -->
+        <nav class="flex hidden gap-6 text-[17px] lg:flex" aria-label="Primary">
+          <a
+            href="index.html"
+            class="group relative transition-all duration-300 outline-none hover:text-[#2e7d32] focus:rounded-md focus:border-[#2e7d32] focus:ring-3 focus:ring-[#81c784]/30 text-[#2e7d32]"
+            aria-current="page"
+            >Home<span
+              class="absolute -bottom-5 left-0 h-[2px] w-full bg-[#2e7d32] transition-all duration-300 ease-out group-hover:w-full"
+            ></span></a
+          ><a
+            href="search.html"
+            class="group relative transition-all duration-300 outline-none hover:text-[#2e7d32] focus:rounded-md focus:border-[#2e7d32] focus:ring-3 focus:ring-[#81c784]/30"
+            >Search<span
+              class="absolute -bottom-5 left-0 h-[2px] w-0 bg-[#2e7d32] transition-all duration-300 ease-out group-hover:w-full"
+            ></span></a
+          ><a
+            href="kitchen.html"
+            class="group relative transition-all duration-300 outline-none hover:text-[#2e7d32] focus:rounded-md focus:border-[#2e7d32] focus:ring-3 focus:ring-[#81c784]/30"
+            >My Kitchen<span
+              class="absolute -bottom-5 left-0 h-[2px] w-0 bg-[#2e7d32] transition-all duration-300 ease-out group-hover:w-full"
+            ></span></a
+          ><a
+            href="planner.html"
+            class="group relative transition-all duration-300 outline-none hover:text-[#2e7d32] focus:rounded-md focus:border-[#2e7d32] focus:ring-3 focus:ring-[#81c784]/30"
+            >Planner<span
+              class="absolute -bottom-5 left-0 h-[2px] w-0 bg-[#2e7d32] transition-all duration-300 ease-out group-hover:w-full"
+            ></span></a
+          ><a
+            href="shopping.html"
+            class="group relative transition-all duration-300 outline-none hover:text-[#2e7d32] focus:rounded-md focus:border-[#2e7d32] focus:ring-3 focus:ring-[#81c784]/30"
+            >Shopping<span
+              class="absolute -bottom-5 left-0 h-[2px] w-0 bg-[#2e7d32] transition-all duration-300 ease-out group-hover:w-full"
+            ></span></a
+          ><a
+            href="favorites.html"
+            class="group relative transition-all duration-300 outline-none hover:text-[#2e7d32] focus:rounded-md focus:border-[#2e7d32] focus:ring-3 focus:ring-[#81c784]/30"
+            >Favorites<span
+              class="absolute -bottom-5 left-0 h-[2px] w-0 bg-[#2e7d32] transition-all duration-300 ease-out group-hover:w-full"
+            ></span
+          ></a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div
+        class="mb-10 bg-gradient-to-b from-[#e9f5eb] to-[#fafafa] pt-10 md:mb-14 md:pt-20"
+      >
+        <div class="mx-auto mb-6.5 w-full max-w-[1440px] px-6">
+          <div class="text-center md:text-center lg:w-[60%] lg:text-left">
+            <h1
+              class="mb-4 font-['poppins'] text-[50px] leading-[1.07] font-[700] -tracking-[0.75px] tracking-tight text-[#212121] md:mb-3 md:text-[72px] md:leading-[1.04]"
+            >
+              What's in your kitchen tonight?
+            </h1>
+            <p
+              class="text-[16px] leading-[1.45] md:text-[18px] md:leading-normal lg:w-[90%]"
+            >
+              Enter the ingredients you have and get recipes you can cook right
+              now. Then plan your week.
+            </p>
+          </div>
+        </div>
+
+        <div class="mx-auto w-full max-w-[1440px] px-4 md:px-6">
+          <div class="relative mb-3.5 rounded-2xl shadow-lg md:mb-4.5">
+            <label for="search-recipe" class="sr-only">
+              Search recipe by ingredients</label
+            >
+            <input
+              type="text"
+              autocomplete="off"
+              name="search-recipe"
+              id="search-recipe"
+              placeholder="chicken,  lemon, garlic ..."
+              class="w-full rounded-2xl border border-[#2e7d32]/50 bg-[#fff] px-3 py-2 pr-38 outline-none placeholder:text-[#757575]/80 focus:border-[#2e7d32] focus:ring-3 focus:ring-[#81c784]/30 md:px-4 md:py-3"
+            />
+            <button
+              type="button"
+              id="find-btn"
+              class="absolute top-1/2 right-2 -translate-y-1/2 cursor-pointer rounded-lg bg-[#2e7d32] px-2 py-[6px] text-[10px] font-[500] tracking-[1.75px] text-[#fafafa] uppercase transition duration-300 outline-none hover:bg-[#2e7d32]/80 focus:border-[#2e7d32] focus:ring-3 focus:ring-[#81c784]/30 md:px-4 md:py-[10px] md:text-[12px]"
+            >
+              Find Recipes
+            </button>
+          </div>
+
+          <div class="flex items-center gap-2.5 md:gap-5">
+            <a
+              href="search.html?diet=Vegetarian"
+              class="rounded-full border border-[#2e7d32] bg-[#2e7d32] px-2 py-[3px] text-[11px] font-[500] tracking-[0.75px] text-[#fafafa] transition duration-300 outline-none focus:border-[#2e7d32] focus:ring-3 focus:ring-[#81c784]/30 md:px-3 md:py-[5px] md:text-[12px]"
+              >Vegetarian</a
+            >
+            <a
+              href="search.html?cuisine=Italian"
+              class="rounded-full border border-[#e0e0e0] px-2 py-[3px] text-[11px] font-[500] tracking-[0.75px] text-[#212121] transition duration-300 outline-none hover:border-[#2e7d32] hover:bg-[#2e7d32] hover:text-[#fafafa] focus:border-[#2e7d32] focus:ring-3 focus:ring-[#81c784]/30 md:px-3 md:py-[5px] md:text-[12px]"
+              >Italian</a
+            >
+            <a
+              href="search.html?time=30"
+              class="rounded-full border border-[#e0e0e0] px-2 py-[3px] text-[11px] font-[500] tracking-[0.75px] text-[#212121] transition duration-300 outline-none hover:border-[#2e7d32] hover:bg-[#2e7d32] hover:text-[#fafafa] focus:border-[#2e7d32] focus:ring-3 focus:ring-[#81c784]/30 md:px-3 md:py-[5px] md:text-[12px]"
+              >Under 30 min</a
+            >
+            <a
+              href="search.html?diet=Gluten-free"
+              class="rounded-full border border-[#e0e0e0] px-2 py-[3px] text-[11px] font-[500] tracking-[0.75px] text-[#212121] transition duration-300 outline-none hover:border-[#2e7d32] hover:bg-[#2e7d32] hover:text-[#fafafa] focus:border-[#2e7d32] focus:ring-3 focus:ring-[#81c784]/30 md:px-3 md:py-[5px] md:text-[12px]"
+            >
+              Gluten-free</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="featured mx-auto mb-14 w-full max-w-[1440px] px-6">
+        <h3
+          class="mb-3 font-['poppins'] text-[18px] font-[700] text-[#212121] md:mb-4 md:text-[20px]"
+        >
+          Featured recipes
+        </h3>
+        <div class="flex flex-col gap-5 md:flex-row">
+          <div
+            data-open="1"
+            tabindex="0"
+            role="link"
+            style="cursor: pointer"
+            class="md:flex-1 overflow-hidden rounded-2xl border border-[#e0e0e0]/40 shadow-md transition duration-300 hover:-translate-y-[6px] hover:shadow-sm"
+          >
+            <img
+              src="https://res.cloudinary.com/hco1unij/image/upload/f_auto/q_auto/Lemon_Herb_Chicken_with_Garden_Vegetables_h6qbwu.png"
+              alt="A dish of Lemon Herb Chicken with Garden Vegetable "
+              class="w-full"
+            />
+
+            <div class="px-5 py-4">
+              <h3
+                class="mb-1 font-['poppins'] text-[16px] font-[700] text-[#212121] md:text-[18px]"
+              >
+                Lemon herb chicken
+              </h3>
+              <div class="flex items-center gap-2 md:gap-3">
+                <p class="text-[12px] md:text-[13px]">35 min</p>
+                <div
+                  class="rounded-full bg-[#81c784]/20 px-2 py-[0.5px] text-[11px] font-[600] text-[#2e7d32]/80 md:text-[12px]"
+                >
+                  <span>Easy</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            data-open="2"
+            tabindex="0"
+            role="link"
+            style="cursor: pointer"
+            class="md:flex-1 overflow-hidden rounded-2xl border border-[#e0e0e0]/40 shadow-md transition duration-300 hover:-translate-y-[6px] hover:shadow-sm"
+          >
+            <img
+              src="https://res.cloudinary.com/hco1unij/image/upload/f_auto/q_auto/Appetizing_Pesto_Penne_with_Fresh_Garnishes_xwqw0h.png"
+              alt="An appetizing dish of Garden pesto pasta"
+              class="w-full"
+            />
+
+            <div class="px-5 py-4">
+              <h3
+                class="mb-1 font-['poppins'] text-[16px] font-[700] text-[#212121] md:text-[18px]"
+              >
+                Garden pesto pasta
+              </h3>
+              <div class="flex items-center gap-2 md:gap-3">
+                <p class="text-[12px] md:text-[13px]">20 min</p>
+                <div
+                  class="rounded-full bg-[#fff2e1] px-2 py-[0.5px] text-[11px] font-[600] text-[#b37832] md:text-[12px]"
+                >
+                  <span>Medium</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            data-open="4"
+            tabindex="0"
+            role="link"
+            style="cursor: pointer"
+            class="md:flex-1 overflow-hidden rounded-2xl border border-[#e0e0e0]/40 shadow-md transition duration-300 hover:-translate-y-[6px] hover:shadow-sm"
+          >
+            <img
+              src="https://res.cloudinary.com/hco1unij/image/upload/f_auto/q_auto/Glazed_Sesame_Salmon_Platter_sbwiqc.png"
+              alt="A dish of Glazed Honey sesame salmon  "
+              class="w-full"
+            />
+
+            <div class="px-5 py-4">
+              <h3
+                class="mb-1 font-['poppins'] text-[16px] font-[700] text-[#212121] md:text-[18px]"
+              >
+                Honey sesame salmon
+              </h3>
+              <div class="flex items-center gap-2 md:gap-3">
+                <p class="text-[12px] md:text-[13px]">25 min</p>
+                <div
+                  class="rounded-full bg-[#81c784]/20 px-2 py-[0.5px] text-[11px] font-[600] text-[#2e7d32]/80 md:text-[12px]"
+                >
+                  <span>Easy</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Mobile navigation -->
+    <nav
+      class="druration-400 pointer-events-none fixed top-0 right-0 z-[70] hidden min-h-[60vh] w-[100%] translate-x-[100%] border-l border-l-[#fafafa] bg-[#fafafa]/60 pt-22 text-center text-[#212121] shadow-[-4px_0_6px_-1px_rgba(0,0,0,0.1)] transition-transform ease-out md:min-h-screen lg:hidden"
+      id="mobile-nav"
+    >
+      <ul class="flex flex-col items-center justify-center gap-6 text-[24px]">
+        <li
+          class="group relative transition-all duration-300 hover:text-[#2e7d32] text-[#2e7d32]"
+        >
+          <a href="index.html"
+            >Home<span
+              class="absolute -bottom-1 left-0 h-[2px] w-full bg-[#2e7d32] transition-all duration-300 ease-out group-hover:w-full"
+            ></span
+          ></a>
+        </li>
+        <li
+          class="group relative transition-all duration-300 hover:text-[#2e7d32]"
+        >
+          <a href="search.html"
+            >Search<span
+              class="absolute -bottom-1 left-0 h-[2px] w-0 bg-[#2e7d32] transition-all duration-300 ease-out group-hover:w-full"
+            ></span
+          ></a>
+        </li>
+        <li
+          class="group relative transition-all duration-300 hover:text-[#2e7d32]"
+        >
+          <a href="kitchen.html"
+            >My Kitchen<span
+              class="absolute -bottom-1 left-0 h-[2px] w-0 bg-[#2e7d32] transition-all duration-300 ease-out group-hover:w-full"
+            ></span
+          ></a>
+        </li>
+        <li
+          class="group relative transition-all duration-300 hover:text-[#2e7d32]"
+        >
+          <a href="planner.html"
+            >Planner<span
+              class="absolute -bottom-1 left-0 h-[2px] w-0 bg-[#2e7d32] transition-all duration-300 ease-out group-hover:w-full"
+            ></span
+          ></a>
+        </li>
+        <li
+          class="group relative transition-all duration-300 hover:text-[#2e7d32]"
+        >
+          <a href="shopping.html"
+            >Shopping<span
+              class="absolute -bottom-1 left-0 h-[2px] w-0 bg-[#2e7d32] transition-all duration-300 ease-out group-hover:w-full"
+            ></span
+          ></a>
+        </li>
+        <li
+          class="group relative transition-all duration-300 hover:text-[#2e7d32]"
+        >
+          <a href="favorites.html"
+            >Favorites<span
+              class="absolute -bottom-1 left-0 h-[2px] w-0 bg-[#2e7d32] transition-all duration-300 ease-out group-hover:w-full"
+            ></span
+          ></a>
+        </li>
+        <li
+          class="group relative transition-all duration-300 hover:text-[#2e7d32]"
+        ></li>
+      </ul>
+    </nav>
+    <!-- Overlay -->
+    <div
+      class="fixed inset-0 z-[60] hidden bg-black/30 backdrop-blur-sm lg:hidden"
+      id="overlay"
+    ></div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

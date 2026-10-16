@@ -1,0 +1,299 @@
+/* Planner styles (from the team's meal-planner build; page frame/header removed, shared nav used instead) */
+:root {
+  --green: #2f8a3a;
+  --border: #d9d9d7;
+  --dash: #d9dbd9;
+}
+.planner-page {
+  max-width: 1200px;
+  margin: 1.5rem auto 4rem;
+  padding: 43px 42px 76px;
+  background: #fff;
+  border: 1px solid #e3e5e1;
+  border-radius: 22px;
+}
+.planner-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+.planner-heading h1 {
+  margin: 0;
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.8px;
+}
+.clear-button {
+  border: 1.5px solid var(--green);
+  color: var(--green);
+  background: #fff;
+  border-radius: 14px;
+  padding: 16px 26px;
+  font:
+    500 16px Inter,
+    sans-serif;
+  letter-spacing: 1.7px;
+  min-width: 184px;
+  height: 57px;
+  cursor: pointer;
+}
+.clear-button:hover {
+  background: #f2f8f3;
+}
+.planner-scroll {
+  width: 100%;
+}
+.calendar {
+  width: 100%;
+}
+.day-headings,
+.meal-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+.day-headings > div,
+.meal-grid > .meal-slot {
+  flex: 0 0 calc((100% - 54px) / 7);
+  min-width: 0;
+}
+.day-headings {
+  margin-bottom: 10px;
+}
+.day-headings > div {
+  text-align: center;
+  color: #777;
+  font-size: 16px;
+}
+.day-headings .today {
+  color: var(--green);
+  font-weight: 500;
+}
+.meal-grid {
+  row-gap: 10px;
+}
+.meal-slot {
+  min-width: 0;
+  height: 113px;
+  border: 1.5px dashed var(--dash);
+  border-radius: 18px;
+  background: #fff;
+  color: #b6b7b7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  padding: 12px 16px;
+  font:
+    400 16px/1.22 Inter,
+    sans-serif;
+  cursor: pointer;
+  transition: 0.15s ease;
+}
+.meal-slot:hover {
+  border-color: #9eb9a1;
+  background: #fbfdfb;
+}
+.meal-slot.drop-target {
+  border-color: var(--green);
+  background: #f7fbf7;
+}
+.meal-slot.filled {
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-style: solid;
+  border-width: 1px 1px 1px 6px;
+  color: #1e2321;
+  font-weight: 500;
+  overflow: hidden;
+}
+.meal-slot.mint {
+  border-left-color: #81c784;
+}
+.meal-slot.green {
+  border-left-color: var(--green);
+}
+.meal-slot.orange {
+  border-left-color: #f6b43d;
+}
+.saved-section {
+  margin-top: 28px;
+}
+.saved-title {
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+  margin-bottom: 12px;
+}
+.saved-title h2 {
+  margin: 0;
+  font-size: 23px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+.saved-title span {
+  font-size: 16px;
+  color: #6e706f;
+}
+.saved-recipes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 17px;
+}
+.saved-recipes > .saved-card {
+  flex: 0 0 calc((100% - 51px) / 4);
+  min-width: 0;
+}
+.saved-card {
+  height: 80px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 9px 12px;
+  text-align: left;
+  color: #202322;
+  font:
+    400 16px/1.18 Inter,
+    sans-serif;
+  cursor: grab;
+  transition: 0.15s ease;
+}
+.saved-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.07);
+}
+.saved-card.dragging {
+  opacity: 0.62;
+}
+.saved-card.selected {
+  outline: 3px solid rgba(47, 138, 58, 0.45);
+  border-color: var(--green);
+}
+.recipe-thumb {
+  width: 51px;
+  height: 58px;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  flex: none;
+}
+.recipe-thumb:after {
+  content: "";
+  position: absolute;
+  width: 31px;
+  height: 31px;
+  border-radius: 50%;
+  border: 8px solid rgba(255, 255, 255, 0.38);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.no-saved {
+  flex: 1 1 100%;
+  color: var(--muted);
+  background: #fafafa;
+  border: 1px dashed var(--border);
+  border-radius: 16px;
+  padding: 1.4rem;
+}
+.no-saved a {
+  color: var(--green);
+  text-decoration: underline;
+}
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 24px;
+  transform: translate(-50%, 20px);
+  background: #202522;
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 10px;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.2s ease;
+  font-size: 14px;
+  z-index: 20;
+}
+.toast.show {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+.meal-slot:focus-visible,
+.saved-card:focus-visible,
+.clear-button:focus-visible {
+  outline: 3px solid rgba(47, 138, 58, 0.28);
+  outline-offset: 2px;
+}
+@media (max-width: 900px) {
+  .planner-page {
+    padding: 35px 28px 55px;
+    margin: 1rem;
+  }
+  .planner-heading h1 {
+    font-size: 27px;
+  }
+  .saved-recipes > .saved-card {
+    flex-basis: calc((100% - 17px) / 2);
+  }
+}
+@media (max-width: 680px) {
+  .planner-page {
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+    padding: 28px 16px 45px;
+  }
+  .planner-heading {
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  .planner-heading h1 {
+    font-size: 25px;
+  }
+  .clear-button {
+    height: 49px;
+    min-width: 145px;
+    padding: 11px 15px;
+    font-size: 13px;
+  }
+  .planner-scroll {
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+  .calendar {
+    min-width: 720px;
+  }
+  .day-headings > div {
+    font-size: 15px;
+  }
+  .meal-slot {
+    height: 104px;
+    font-size: 15px;
+    border-radius: 15px;
+  }
+  .saved-card {
+    height: 73px;
+    padding: 7px 9px;
+    gap: 9px;
+    font-size: 14px;
+  }
+  .recipe-thumb {
+    width: 44px;
+    height: 55px;
+  }
+}
+@media (max-width: 430px) {
+  .saved-recipes > .saved-card {
+    flex-basis: 100%;
+  }
+}
+.recipe-thumb[style*="url("]:after {
+  display: none;
+}

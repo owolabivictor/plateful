@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="icon" href="logo.svg" type="image/svg+xml" />
+    <title>Meal planner · Plateful</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/shared.css" />
+    <link rel="stylesheet" href="css/planner.css" />
+  </head>
+  <body>
+    <div id="nav"></div>
+    <main class="planner-page">
+      <div class="planner-heading">
+        <h1 id="weekTitle"></h1>
+        <button id="clearWeek" class="clear-button" type="button">
+          CLEAR WEEK
+        </button>
+      </div>
+      <div class="planner-scroll">
+        <div class="calendar">
+          <div class="day-headings" id="days"></div>
+          <div class="meal-grid" id="grid"></div>
+        </div>
+      </div>
+      <section class="saved-section">
+        <div class="saved-title">
+          <h2>Saved recipes</h2>
+          <span>drag onto a day, or tap a recipe then a day</span>
+        </div>
+        <div class="saved-recipes" id="saved"></div>
+      </section>
+    </main>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="js/data.js"></script>
+    <script src="js/planner.js"></script>
+  </body>
+</html>

@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="icon" href="logo.svg" type="image/svg+xml" />
+    <title>Shopping list · Plateful</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/shared.css" />
+    <style>
+      .head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+      .actions {
+        display: flex;
+        gap: 0.6rem;
+      }
+      .groups {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.2rem;
+        margin-top: 1.5rem;
+      }
+      .groups > .group {
+        flex: 1 1 280px;
+        max-width: 420px;
+      }
+      .group {
+        background: #fff;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 1.2rem 1.4rem;
+      }
+      .group h3 {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+      }
+      .group label {
+        display: flex;
+        gap: 0.7rem;
+        align-items: center;
+        padding: 0.5rem 0;
+        border-bottom: 1px solid var(--border);
+        cursor: pointer;
+      }
+      .group label:last-child {
+        border: 0;
+      }
+      .group input {
+        accent-color: var(--primary);
+        width: 18px;
+        height: 18px;
+      }
+      .group label.done span {
+        text-decoration: line-through;
+        color: var(--muted);
+      }
+      .group small {
+        color: var(--muted);
+        margin-left: auto;
+      }
+      .empty {
+        background: #fff;
+        border: 1px dashed var(--border);
+        border-radius: var(--radius);
+        padding: 2rem;
+        text-align: center;
+        color: var(--muted);
+        margin-top: 1.5rem;
+      }
+      .empty a {
+        color: var(--primary);
+        text-decoration: underline;
+      }
+      .note {
+        color: var(--muted);
+        font-size: 0.9rem;
+        margin-top: 1rem;
+      }
+      @media print {
+        .nav,
+        .actions {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="nav"></div>
+    <main class="wrap">
+      <div class="head">
+        <div>
+          <h1 style="font-size: 2rem; font-weight: 700">Shopping list</h1>
+          <p style="color: var(--muted); margin: 0.3rem 0 0">
+            Built from this week's meal plan, minus what's in My Kitchen.
+          </p>
+        </div>
+        <div class="actions">
+          <button class="btn ghost" id="copy">Copy list</button
+          ><button class="btn ghost" id="print">Print</button>
+        </div>
+      </div>
+      <div id="out"></div>
+      <p class="note" id="note"></p>
+    </main>
+    <script src="js/data.js"></script>
+    <script>
+      document.getElementById("nav").innerHTML = NAV("shopping");
+      ready.then(() => {
+        const $ = (id) => document.getElementById(id);
+        const CATS = {
+          Produce: [
+            "tomato",
+            "onion",
+            "garlic",
+            "lemon",
+            "lime",
+            "pepper",
+            "carrot",
+            "potato",
+            "spinach",
+            "mushroom",
+            "cucumber",
+            "avocado",
+            "basil",
+            "parsley",
+            "coriander",
+            "thyme",
+            "rosemary",
+            "ginger",
+            "celery",
+            "cabbage",
+            "lettuce",
+            "bean",
+            "pea",
+            "berries",
+            "herb",
+            "chilli",
+            "courgette",
+            "aubergine",
+            "apple",
+            "orange",
+          ],
+          "Meat & fish": [
+            "chicken",
+            "beef",
+            "pork",
+            "lamb",
+            "bacon",
+            "sausage",
+            "ham",
+            "turkey",
+            "salmon",
+            "fish",
+            "prawn",
+            "shrimp",
+            "tuna",
+            "cod",
+            "mince",
+          ],
+          "Dairy & eggs": [
+            "milk",
+            "cheese",
+            "butter",
+            "cream",
+            "yog",
+            "egg",
+            "parmesan",
+            "feta",
+            "mozzarella",
+          ],
+          Pantry: [
+            "flour",
+            "sugar",
+            "rice",
+            "pasta",
+            "noodle",
+            "oil",
+            "sauce",
+            "stock",
+            "salt",
+            "spice",
+            "cumin",
+            "paprika",
+            "oats",
+            "quinoa",
+            "honey",
+            "sesame",
+            "vinegar",
+            "bread",
+            "chickpea",
+            "lentil",
+            "coconut",
+            "paste",
+            "powder",
+            "wine",
+            "mustard",
+            "seed",
+            "nut",
+          ],
+        };
+        const cat = (i) =>
+          Object.keys(CATS).find((c) => CATS[c].some((k) => i.includes(k))) ||
+          "Other";
+        const CK = "rf_shop_checked_" + planKey();
+        let checked = store.get(CK, []);
+        function build() {
+          const plan = store.get(planKey(), {}),
+            pantry = Pantry.list(),
+            count = {};
+          const ids = Object.entries(plan)
+            .filter(([k]) => /^[a-z]{3}-/.test(k))
+            .map((e) => e[1]);
+          ids.forEach((id) =>
+            (byId(id)?.ingredients || []).forEach(
+              (i) => (count[i] = (count[i] || 0) + 1),
+            ),
+          );
+          const all = Object.keys(count),
+            need = all.filter((i) => !Pantry.has(i));
+          return {
+            meals: ids.length,
+            need,
+            count,
+            skipped: all.length - need.length,
+          };
+        }
+        function render() {
+          const { meals, need, count, skipped } = build();
+          if (!meals) {
+            $("out").innerHTML =
+              `<div class="empty">Your meal plan is empty.<br><a href="planner.html">Plan some meals</a> and your list will appear here.</div>`;
+            $("note").textContent = "";
+            return;
+          }
+          const g = {};
+          need.sort().forEach((i) => (g[cat(i)] ??= []).push(i));
+          $("out").innerHTML = need.length
+            ? `<div class="groups">${Object.keys(g)
+                .sort()
+                .map(
+                  (c) =>
+                    `<section class="group"><h3>${c}</h3>${g[c].map((i) => `<label class="${checked.includes(i) ? "done" : ""}"><input type="checkbox" data-i="${i}" ${checked.includes(i) ? "checked" : ""}><span>${i}</span>${count[i] > 1 ? `<small>${count[i]} meals</small>` : ""}</label>`).join("")}</section>`,
+                )
+                .join("")}</div>`
+            : `<div class="empty">You already have everything for this week.</div>`;
+          $("note").textContent = skipped
+            ? `${skipped} item${skipped > 1 ? "s" : ""} left off because they're in My Kitchen.`
+            : "";
+        }
+        $("out").onchange = (e) => {
+          const i = e.target.dataset.i;
+          checked = e.target.checked
+            ? [...checked, i]
+            : checked.filter((x) => x !== i);
+          store.set(CK, checked);
+          render();
+        };
+        $("print").onclick = () => print();
+        $("copy").onclick = async () => {
+          const t = build()
+            .need.filter((i) => !checked.includes(i))
+            .join("\n");
+          try {
+            await navigator.clipboard.writeText(t);
+            $("copy").textContent = "Copied";
+          } catch {
+            $("copy").textContent = "Copy failed";
+          }
+          setTimeout(() => ($("copy").textContent = "Copy list"), 1500);
+        };
+        render();
+      });
+    </script>
+  </body>
+</html>
