@@ -2,7 +2,7 @@
 (function () {
   const css = document.createElement("style");
   css.textContent = `
-#rmodal{border:0;border-radius:20px;padding:0;width:min(760px,94vw);max-height:90vh;overflow:auto;box-shadow:0 24px 60px rgba(0,0,0,.3);font-family:Inter,sans-serif;color:#212121}
+#rmodal{position:fixed;inset:0;margin:auto;max-width:94vw;border:0;border-radius:20px;padding:0;width:min(760px,94vw);max-height:90vh;max-height:90dvh;overflow:auto;box-shadow:0 24px 60px rgba(0,0,0,.3);font-family:Inter,sans-serif;color:#212121}
 #rmodal::backdrop{background:rgba(0,0,0,.5)}
 .rm-head{height:150px;position:relative}.rm-x{position:sticky;float:right;top:10px;margin:10px;width:38px;height:38px;border:0;border-radius:50%;background:#fff;font-size:1.4rem;cursor:pointer}
 .rm-body{padding:1.4rem 1.6rem 1.8rem}.rm-body h2{font:700 1.7rem Poppins,sans-serif;margin:0 0 .5rem}

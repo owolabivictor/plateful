@@ -25,15 +25,6 @@ document.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && !mobileNav.classList.contains("hidden"))
     toggleMenu();
 });
-// Ingredient search -> Search page
-function go() {
-  const q = $("search-recipe").value.trim();
-  location.href = "search.html" + (q ? "?q=" + encodeURIComponent(q) : "");
-}
-$("find-btn").addEventListener("click", go);
-$("search-recipe").addEventListener("keydown", (e) => {
-  if (e.key === "Enter") go();
-});
 document.querySelectorAll("[data-open]").forEach((c) =>
   c.addEventListener("keydown", (e) => {
     if (e.key === "Enter") openRecipe(c.dataset.open);

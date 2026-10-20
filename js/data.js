@@ -34,20 +34,44 @@ const Favs = {
     return l.includes(id);
   },
 };
-const NAV = (cur) =>
-  `<header class="nav"><a class="logo" href="index.html"><img src="logo.svg" alt="" width="30" height="30">${APP.name}</a><nav><ul>${[
+const NAV = (cur) => {
+  const L = [
     ["index", "Home"],
     ["search", "Search"],
     ["kitchen", "My Kitchen"],
     ["planner", "Planner"],
     ["shopping", "Shopping"],
     ["favorites", "Favorites"],
-  ]
-    .map(
-      ([f, l]) =>
-        `<li><a href="${f}.html" class="${f === cur ? "active" : ""}">${l}</a></li>`,
-    )
-    .join("")}</ul></nav></header>`;
+  ];
+  const li = (f, l, c = "") =>
+    `<li><a href="${f}.html" class="${f === cur ? "active" : ""}">${l}</a></li>`;
+  return `<header class="nav"><a class="logo" href="index.html"><img src="logo.svg" alt="" width="30" height="30">${APP.name}</a>
+<button type="button" class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+<svg class="ic-menu" viewBox="0 0 512 512" width="34" height="34" aria-hidden="true"><path d="M80 160h352M80 256h352M80 352h352" fill="none" stroke="currentColor" stroke-width="32" stroke-linecap="round"/></svg>
+<svg class="ic-close" viewBox="0 0 512 512" width="34" height="34" aria-hidden="true"><path d="M368 368 144 144M368 144 144 368" fill="none" stroke="currentColor" stroke-width="32" stroke-linecap="round"/></svg></button>
+<nav class="nav-desktop" aria-label="Primary"><ul>${L.map(([f, l]) => li(f, l)).join("")}</ul></nav></header>
+<nav class="mnav" id="mobileNav" aria-label="Mobile"><ul>${L.map(([f, l]) => li(f, l)).join("")}</ul></nav><div class="moverlay" id="navOverlay"></div>`;
+};
+// Mobile menu: same open/close + scroll-lock behaviour as the Home page hamburger
+function setNav(open) {
+  document.body.classList.toggle("nav-open", open);
+  const t = document.getElementById("navToggle");
+  if (t) {
+    t.setAttribute("aria-expanded", open);
+    t.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+  }
+}
+document.addEventListener("click", (e) => {
+  if (e.target.closest("#navToggle"))
+    setNav(!document.body.classList.contains("nav-open"));
+  else if (e.target.closest("#navOverlay, #mobileNav a")) setNav(false);
+});
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") setNav(false);
+});
+matchMedia("(min-width:1024px)").addEventListener("change", (e) => {
+  if (e.matches) setNav(false);
+});
 const APP = {
   name: "Plateful",
   tagline: "Cook what you have. Plan your week.",
@@ -236,6 +260,8 @@ const ready = (async () => {
     DETAIL[r.id] = r.details;
     delete r.details;
     r.img = G[r.img] || r.img;
+    if (!/^(url\(|linear-gradient)/.test(r.img))
+      r.img = "url('" + r.img + "') center/cover no-repeat";
     r.type =
       r.type || (r.id === 8 ? "Breakfast" : r.time <= 15 ? "Lunch" : "Dinner");
     RECIPES.push(r);
@@ -264,8 +290,3 @@ const ready = (async () => {
     throw new Error("no recipes");
   }
 })();
-addEventListener("DOMContentLoaded", () =>
-  document
-    .querySelector(".nav a.active")
-    ?.scrollIntoView({ inline: "center", block: "nearest" }),
-);

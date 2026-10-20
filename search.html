@@ -1,368 +1,250 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <link rel="icon" href="logo.svg" type="image/svg+xml" />
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="icon" href="logo.svg" type="image/svg+xml">
     <title>Search recipes · Plateful</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/shared.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/shared.css">
     <style>
-      .layout {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 2rem;
-        align-items: flex-start;
-      }
-      .layout > .filters {
-        flex: 0 0 260px;
-      }
-      .layout > section {
-        flex: 1 1 420px;
-        min-width: 0;
-      }
-      .filters {
-        background: #fff;
-        border: 1px solid var(--border);
-        border-radius: var(--radius);
-        padding: 1.4rem;
-      }
-      .filters h3 {
-        font-size: 0.95rem;
-        color: var(--muted);
-        margin: 1.2rem 0 0.6rem;
-      }
-      .filters h3:first-child {
-        margin-top: 0;
-      }
-      .tags {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-      }
-      .ing {
-        background: #fff3e0;
-        border: 1px solid var(--secondary);
-        color: #8a5200;
-        border-radius: 999px;
-        padding: 0.35rem 0.9rem;
-        cursor: pointer;
-        font: inherit;
-      }
-      .ing:hover {
-        background: #ffe0b2;
-      }
-      .filters label {
-        display: flex;
-        gap: 0.5rem;
-        align-items: center;
-        margin: 0.4rem 0;
-        cursor: pointer;
-      }
-      .filters input[type="checkbox"] {
-        accent-color: var(--primary);
-        width: 18px;
-        height: 18px;
-      }
-      select {
-        width: 100%;
-        padding: 0.6rem;
-        border: 1px solid var(--border);
-        border-radius: 10px;
-        font: inherit;
-        background: #fff;
-      }
-      input[type="range"] {
-        width: 100%;
-        accent-color: var(--primary);
-      }
-      .searchbar {
-        display: flex;
-        border: 2px solid var(--primary);
-        border-radius: 14px;
-        background: #fff;
-        padding: 0.4rem;
-        margin-bottom: 1rem;
-      }
-      .searchbar input {
-        flex: 1;
-        border: 0;
-        font: inherit;
-        padding: 0.6rem 1rem;
-        min-width: 0;
-        background: none;
-      }
-      .searchbar input:focus {
-        outline: none;
-      }
-      .count {
-        color: var(--muted);
-        margin: 0 0 1rem;
-      }
-      .grid {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1.2rem;
-      }
-      .grid > .card,
-      .grid > article {
-        flex: 1 1 210px;
-        max-width: 340px;
-      }
-      .empty {
-        flex: 1 1 100%;
-        max-width: none;
-        text-align: center;
-        padding: 3rem 1rem;
-        color: var(--muted);
-        background: #fff;
-        border: 1px dashed var(--border);
-        border-radius: var(--radius);
-      }
-      .matchnote {
-        font-size: 0.8rem;
-        color: var(--primary);
-        margin-top: 0.5rem;
-      }
-      #ftoggle {
-        display: none;
-      }
-      .cnt-ing {
-        display: none;
-      }
-      @media (max-width: 800px) {
-        .layout > .filters {
-          flex-basis: 100%;
-          display: none;
+        .layout {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            align-items: flex-start
         }
-        .layout > .filters.show {
-          display: block;
+
+        .layout>.filters {
+            flex: 0 0 260px
         }
+
+        .layout>section {
+            flex: 1 1 420px;
+            min-width: 0
+        }
+
+        .filters {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.4rem
+        }
+
+        .filters h3 {
+            font-size: .95rem;
+            color: var(--muted);
+            margin: 1.2rem 0 .6rem
+        }
+
+        .filters h3:first-child {
+            margin-top: 0
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .5rem
+        }
+
+        .ing {
+            background: #FFF3E0;
+            border: 1px solid var(--secondary);
+            color: #8a5200;
+            border-radius: 999px;
+            padding: .35rem .9rem;
+            cursor: pointer;
+            font: inherit
+        }
+
+        .ing:hover {
+            background: #FFE0B2
+        }
+
+        .filters label {
+            display: flex;
+            gap: .5rem;
+            align-items: center;
+            margin: .4rem 0;
+            cursor: pointer
+        }
+
+        .filters input[type=checkbox] {
+            accent-color: var(--primary);
+            width: 18px;
+            height: 18px
+        }
+
+        select {
+            width: 100%;
+            padding: .6rem;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            font: inherit;
+            background: #fff
+        }
+
+        input[type=range] {
+            width: 100%;
+            accent-color: var(--primary)
+        }
+
+        .searchbar {
+            display: flex;
+            border: 2px solid var(--primary);
+            border-radius: 14px;
+            background: #fff;
+            padding: .4rem;
+            margin-bottom: 1rem
+        }
+
+        .searchbar input {
+            flex: 1;
+            border: 0;
+            font: inherit;
+            padding: .6rem 1rem;
+            min-width: 0;
+            background: none
+        }
+
+        .searchbar input:focus {
+            outline: none
+        }
+
+        .count {
+            color: var(--muted);
+            margin: 0 0 1rem
+        }
+
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem
+        }
+
+        .grid>.card,
+        .grid>article {
+            flex: 1 1 210px;
+            max-width: 340px
+        }
+
+        .empty {
+            flex: 1 1 100%;
+            max-width: none;
+            text-align: center;
+            padding: 3rem 1rem;
+            color: var(--muted);
+            background: #fff;
+            border: 1px dashed var(--border);
+            border-radius: var(--radius)
+        }
+
+        .matchnote {
+            font-size: .8rem;
+            color: var(--primary);
+            margin-top: .5rem
+        }
+
         #ftoggle {
-          display: block;
-          width: 100%;
-          margin-bottom: 1rem;
+            display: none
         }
+
         .cnt-ing {
-          display: inline;
+            display: none
         }
-      }
+
+        @media(max-width:800px) {
+            .layout>.filters {
+                flex-basis: 100%;
+                display: none
+            }
+
+            .layout>.filters.show {
+                display: block
+            }
+
+            #ftoggle {
+                display: block;
+                width: 100%;
+                margin-bottom: 1rem
+            }
+
+            .cnt-ing {
+                display: inline
+            }
+        }
     </style>
-  </head>
-  <body>
+</head>
+
+<body>
     <div id="nav"></div>
-    <main class="wrap">
-      <button
-        class="btn ghost"
-        id="ftoggle"
-        type="button"
-        aria-expanded="false"
-      >
-        Filters
-      </button>
-      <div class="layout">
-        <aside class="filters" aria-label="Filters">
-          <h2 style="font-size: 1.2rem; margin-bottom: 1rem">Filters</h2>
-          <h3>Ingredients</h3>
-          <div class="tags" id="tags"></div>
-          <button
-            class="btn ghost"
-            id="usePantry"
-            style="margin-top: 0.8rem; width: 100%; padding: 0.5rem"
-          >
-            Add my kitchen items
-          </button>
-          <h3>Diet</h3>
-          <div id="diets"></div>
-          <h3>Cuisine</h3>
-          <select id="cuisine">
-            <option value="">Any</option>
-          </select>
-          <h3>Cook time</h3>
-          <input
-            type="range"
-            id="time"
-            min="10"
-            max="90"
-            step="5"
-            value="45"
-            aria-label="Maximum cook time"
-          />
-          <div id="timeLabel"></div>
-          <button
-            class="btn ghost"
-            id="reset"
-            style="margin-top: 1.2rem; width: 100%"
-          >
-            Reset filters
-          </button>
-        </aside>
-        <section>
-          <form class="searchbar" id="form">
-            <input
-              id="q"
-              placeholder="Add an ingredient, e.g. chicken, lemon"
-              aria-label="Add ingredients"
-            /><button class="btn">Search</button>
-          </form>
-          <div
-            class="tags"
-            id="dtags"
-            style="margin-bottom: 1rem"
-            role="group"
-            aria-label="Dietary tags"
-          ></div>
-          <p class="count" id="count" aria-live="polite"></p>
-          <div class="grid" id="grid"></div>
-        </section>
-      </div>
+    <main class="wrap"><button class="btn ghost" id="ftoggle" type="button" aria-expanded="false">Filters</button>
+        <div class="layout">
+            <aside class="filters" aria-label="Filters">
+                <h2 style="font-size:1.2rem;margin-bottom:1rem">Filters</h2>
+                <h3>Ingredients</h3>
+                <div class="tags" id="tags"></div>
+                <button class="btn ghost" id="usePantry" style="margin-top:.8rem;width:100%;padding:.5rem">Add my
+                    kitchen items</button>
+                <h3>Diet</h3>
+                <div id="diets"></div>
+                <h3>Cuisine</h3><select id="cuisine">
+                    <option value="">Any</option>
+                </select>
+                <h3>Cook time</h3><input type="range" id="time" min="10" max="90" step="5" value="45"
+                    aria-label="Maximum cook time">
+                <div id="timeLabel"></div>
+                <button class="btn ghost" id="reset" style="margin-top:1.2rem;width:100%">Reset filters</button>
+            </aside>
+            <section>
+                <form class="searchbar" id="form"><input id="q" placeholder="Add an ingredient, e.g. chicken, lemon"
+                        aria-label="Add ingredients"><button class="btn">Search</button></form>
+                <div class="tags" id="dtags" style="margin-bottom:1rem" role="group" aria-label="Dietary tags"></div>
+                <p class="count" id="count" aria-live="polite"></p>
+                <div class="grid" id="grid"></div>
+            </section>
+        </div>
     </main>
     <script src="js/data.js"></script>
     <script src="js/modal.js"></script>
     <script>
-      document.getElementById("nav").innerHTML = NAV("search");
-      ready.then(() => {
-        const $ = (id) => document.getElementById(id);
-        let ings = (new URLSearchParams(location.search).get("q") || "")
-          .split(",")
-          .map((s) => s.trim().toLowerCase())
-          .filter(Boolean);
-        const diets = ["Vegetarian", "Vegan", "Gluten-free"];
-        $("diets").innerHTML = diets
-          .map(
-            (d) => `<label><input type="checkbox" value="${d}"> ${d}</label>`,
-          )
-          .join("");
-        [...new Set(RECIPES.map((r) => r.cuisine))]
-          .sort()
-          .forEach((c) => $("cuisine").add(new Option(c, c)));
-        function addIngs(text) {
-          text
-            .split(",")
-            .map((s) => s.trim().toLowerCase())
-            .filter(Boolean)
-            .forEach((s) => {
-              if (!ings.includes(s)) ings.push(s);
-            });
-          render();
-        }
-        $("form").onsubmit = (e) => {
-          e.preventDefault();
-          addIngs($("q").value);
-          $("q").value = "";
-        };
-        $("usePantry").onclick = () => {
-          const p = Pantry.list();
-          if (!p.length) {
-            location.href = "kitchen.html";
-            return;
-          }
-          addIngs(p.join(","));
-        };
-        $("reset").onclick = () => {
-          ings = [];
-          $("cuisine").value = "";
-          $("time").value = 45;
-          document
-            .querySelectorAll("#diets input")
-            .forEach((c) => (c.checked = false));
-          render();
-        };
-        ["cuisine", "time"].forEach((id) => ($(id).oninput = render));
-        $("diets").onchange = render;
-        function render() {
-          $("tags").innerHTML = ings.length
-            ? ings
-                .map(
-                  (s, i) =>
-                    `<button class="ing" data-i="${i}" aria-label="Remove ${esc(s)}">${esc(s)} ×</button>`,
-                )
-                .join("")
-            : `<span style="color:var(--muted);font-size:.9rem">None yet</span>`;
-          $("timeLabel").textContent = "Up to " + $("time").value + " min";
-          const dsel = [
-              ...document.querySelectorAll("#diets input:checked"),
-            ].map((c) => c.value),
-            cu = $("cuisine").value,
-            max = +$("time").value;
-          $("dtags").innerHTML = diets
-            .map(
-              (d) =>
-                `<button type="button" class="chip ${dsel.includes(d) ? "on" : ""}" data-d="${d}" aria-pressed="${dsel.includes(d)}">${d}</button>`,
-            )
-            .join("");
-          const res = RECIPES.map((r) => ({
-            r,
-            hits: ings.filter((i) => r.ingredients.some((x) => ingMatch(x, i)))
-              .length,
-          }))
-            .filter(
-              ({ r, hits }) =>
-                (!ings.length || hits) &&
-                dsel.every((d) => r.diet.includes(d)) &&
-                (!cu || r.cuisine === cu) &&
-                r.time <= max,
-            )
-            .sort((a, b) => b.hits - a.hits);
-          $("count").innerHTML =
-            res.length +
-            (res.length === 1 ? " recipe matches" : " recipes match") +
-            (ings.length
-              ? '<span class="cnt-ing"> for ' +
-                ings.map(esc).join(", ") +
-                "</span>"
-              : "");
-          $("grid").innerHTML = res.length
-            ? res
-                .map(
-                  ({ r, hits }) =>
-                    `<article class="card"><a href="recipe.html?id=${r.id}" data-open="${r.id}"><div class="img" style="background:${r.img}"></div><div class="body"><h3>${r.title}</h3><div class="meta">${r.time} min <span class="tag ${r.difficulty}">${r.difficulty}</span></div><div class="dt">${r.diet.map((d) => `<span class="tag">${d}</span>`).join(" ")}</div>${ings.length ? `<div class="matchnote">Uses ${hits} of your ${ings.length} ingredient${ings.length > 1 ? "s" : ""}</div>` : ""}</div></a><button class="heart ${Favs.has(r.id) ? "on" : ""}" data-id="${r.id}" aria-label="Save ${r.title}" aria-pressed="${Favs.has(r.id)}">♥</button></article>`,
-                )
-                .join("")
-            : `<div class="empty"><strong>No recipes match these filters.</strong><br>Remove an ingredient or raise the cook time.</div>`;
-        }
-        $("tags").onclick = (e) => {
-          const b = e.target.closest(".ing");
-          if (b) {
-            ings.splice(+b.dataset.i, 1);
+        document.getElementById("nav").innerHTML = NAV("search"); ready.then(() => {
+            const $ = id => document.getElementById(id);
+            let ings = (new URLSearchParams(location.search).get("q") || "").split(",").map(s => s.trim().toLowerCase()).filter(Boolean);
+            const diets = ["Vegetarian", "Vegan", "Gluten-free"];
+            $("diets").innerHTML = diets.map(d => `<label><input type="checkbox" value="${d}"> ${d}</label>`).join("");
+            [...new Set(RECIPES.map(r => r.cuisine))].sort().forEach(c => $("cuisine").add(new Option(c, c)));
+            function addIngs(text) { text.split(",").map(s => s.trim().toLowerCase()).filter(Boolean).forEach(s => { if (!ings.includes(s)) ings.push(s) }); render() }
+            $("form").onsubmit = e => { e.preventDefault(); addIngs($("q").value); $("q").value = "" };
+            $("usePantry").onclick = () => { const p = Pantry.list(); if (!p.length) { location.href = "kitchen.html"; return } addIngs(p.join(",")) };
+            $("reset").onclick = () => { ings = []; $("cuisine").value = ""; $("time").value = 45; document.querySelectorAll("#diets input").forEach(c => c.checked = false); render() };
+            ["cuisine", "time"].forEach(id => $(id).oninput = render);
+            $("diets").onchange = render;
+            function render() {
+                $("tags").innerHTML = ings.length ? ings.map((s, i) => `<button class="ing" data-i="${i}" aria-label="Remove ${esc(s)}">${esc(s)} ×</button>`).join("") : `<span style="color:var(--muted);font-size:.9rem">None yet</span>`;
+                $("timeLabel").textContent = "Up to " + $("time").value + " min";
+                const dsel = [...document.querySelectorAll("#diets input:checked")].map(c => c.value), cu = $("cuisine").value, max = +$("time").value;
+                $("dtags").innerHTML = diets.map(d => `<button type="button" class="chip ${dsel.includes(d) ? "on" : ""}" data-d="${d}" aria-pressed="${dsel.includes(d)}">${d}</button>`).join(""); const res = RECIPES.map(r => ({ r, hits: ings.filter(i => r.ingredients.some(x => ingMatch(x, i))).length }))
+                    .filter(({ r, hits }) => (!ings.length || hits) && dsel.every(d => r.diet.includes(d)) && (!cu || r.cuisine === cu) && r.time <= max)
+                    .sort((a, b) => b.hits - a.hits);
+                $("count").innerHTML = res.length + (res.length === 1 ? " recipe matches" : " recipes match") + (ings.length ? '<span class="cnt-ing"> for ' + ings.map(esc).join(", ") + "</span>" : "");
+                $("grid").innerHTML = res.length ? res.map(({ r, hits }) => `<article class="card"><a href="recipe.html?id=${r.id}" data-open="${r.id}"><div class="img" style="background:${r.img}"></div><div class="body"><h3>${r.title}</h3><div class="meta">${r.time} min <span class="tag ${r.difficulty}">${r.difficulty}</span></div><div class="dt">${r.diet.map(d => `<span class="tag">${d}</span>`).join(" ")}</div>${ings.length ? `<div class="matchnote">Uses ${hits} of your ${ings.length} ingredient${ings.length > 1 ? "s" : ""}</div>` : ""}</div></a><button class="heart ${Favs.has(r.id) ? "on" : ""}" data-id="${r.id}" aria-label="Save ${r.title}" aria-pressed="${Favs.has(r.id)}">♥</button></article>`).join("")
+                    : `<div class="empty"><strong>No recipes match these filters.</strong><br>Remove an ingredient or raise the cook time.</div>`;
+            }
+            $("tags").onclick = e => { const b = e.target.closest(".ing"); if (b) { ings.splice(+b.dataset.i, 1); render() } };
+            $("grid").onclick = e => { const b = e.target.closest(".heart"); if (b) { const on = Favs.toggle(b.dataset.id); b.classList.toggle("on", on); b.setAttribute("aria-pressed", on) } };
+            const P = new URLSearchParams(location.search);
+            if (P.get("diet")) document.querySelectorAll("#diets input").forEach(c => c.checked = c.value === P.get("diet"));
+            if (P.get("cuisine")) $("cuisine").value = P.get("cuisine");
+            if (P.get("time")) $("time").value = P.get("time");
             render();
-          }
-        };
-        $("grid").onclick = (e) => {
-          const b = e.target.closest(".heart");
-          if (b) {
-            const on = Favs.toggle(b.dataset.id);
-            b.classList.toggle("on", on);
-            b.setAttribute("aria-pressed", on);
-          }
-        };
-        const P = new URLSearchParams(location.search);
-        if (P.get("diet"))
-          document
-            .querySelectorAll("#diets input")
-            .forEach((c) => (c.checked = c.value === P.get("diet")));
-        if (P.get("cuisine")) $("cuisine").value = P.get("cuisine");
-        if (P.get("time")) $("time").value = P.get("time");
-        render();
-        $("ftoggle").onclick = () => {
-          const o = document.querySelector(".filters").classList.toggle("show");
-          $("ftoggle").setAttribute("aria-expanded", o);
-          $("ftoggle").textContent = o ? "Hide filters" : "Filters";
-        };
-        $("dtags").onclick = (e) => {
-          const b = e.target.closest(".chip");
-          if (!b) return;
-          const c = [...document.querySelectorAll("#diets input")].find(
-            (x) => x.value === b.dataset.d,
-          );
-          c.checked = !c.checked;
-          render();
-        };
-        addEventListener("rf:favs", render);
-      });
+            $("ftoggle").onclick = () => { const o = document.querySelector(".filters").classList.toggle("show"); $("ftoggle").setAttribute("aria-expanded", o); $("ftoggle").textContent = o ? "Hide filters" : "Filters" };
+            $("dtags").onclick = e => { const b = e.target.closest(".chip"); if (!b) return; const c = [...document.querySelectorAll("#diets input")].find(x => x.value === b.dataset.d); c.checked = !c.checked; render() };
+            addEventListener("rf:favs", render);
+        });
     </script>
-  </body>
+</body>
+
 </html>

@@ -1,1053 +1,2290 @@
 {
-  "recipes": [
-    {
-      "id": 1,
-      "title": "Lemon herb chicken",
-      "time": 35,
-      "difficulty": "Easy",
-      "diet": [],
-      "cuisine": "Mediterranean",
-      "ingredients": ["chicken", "lemon", "garlic", "olive oil", "thyme"],
-      "img": "orange",
-      "details": {
-        "s": 4,
-        "n": [420, 38, 9],
-        "i": [
-          [4, "chicken thigh|s"],
-          [2, "lemon|s"],
-          [3, "garlic clove|s"],
-          [1, "tbsp olive oil"],
-          [0, "Fresh thyme"]
-        ],
-        "st": [
-          [
-            "Zest one lemon and juice both. Mix with minced garlic, olive oil and thyme."
-          ],
-          ["Coat the chicken in the marinade and let it rest.", 10],
-          ["Roast at 200°C (400°F) until golden and cooked through.", 25],
-          ["Rest for a few minutes, then serve with the pan juices.", 5]
-        ]
-      }
-    },
-    {
-      "id": 2,
-      "title": "Garden pesto pasta",
-      "time": 20,
-      "difficulty": "Medium",
-      "diet": ["Vegetarian"],
-      "cuisine": "Italian",
-      "ingredients": ["pasta", "basil", "garlic", "olive oil", "parmesan"],
-      "img": "green",
-      "details": {
-        "s": 4,
-        "n": [520, 16, 68],
-        "i": [
-          [400, "g pasta"],
-          [1, "cup|s fresh basil"],
-          [2, "garlic clove|s"],
-          [3, "tbsp olive oil"],
-          [50, "g parmesan"]
-        ],
-        "st": [
-          ["Boil the pasta in well-salted water until just tender.", 10],
-          ["Blend basil, garlic, olive oil and parmesan into a rough pesto."],
-          ["Toss the pasta with the pesto and a splash of pasta water."],
-          ["Serve straight away with extra parmesan."]
-        ]
-      }
-    },
-    {
-      "id": 3,
-      "title": "Tomato basil soup",
-      "time": 30,
-      "difficulty": "Easy",
-      "diet": ["Vegetarian", "Vegan", "Gluten-free"],
-      "cuisine": "Italian",
-      "ingredients": ["tomato", "basil", "onion", "garlic"],
-      "img": "red",
-      "details": {
-        "s": 4,
-        "n": [180, 5, 28],
-        "i": [
-          [800, "g canned tomatoes"],
-          [1, "onion|s"],
-          [3, "garlic clove|s"],
-          [500, "ml vegetable stock"],
-          [0, "Fresh basil"]
-        ],
-        "st": [
-          ["Soften the chopped onion and garlic in a little oil.", 5],
-          ["Add the tomatoes and stock, then simmer.", 20],
-          ["Blend until smooth with the basil."],
-          ["Season to taste and serve hot."]
-        ]
-      }
-    },
-    {
-      "id": 4,
-      "title": "Honey sesame salmon",
-      "time": 25,
-      "difficulty": "Easy",
-      "diet": ["Gluten-free"],
-      "cuisine": "Asian",
-      "ingredients": ["salmon", "honey", "sesame", "soy sauce", "garlic"],
-      "img": "yellow",
-      "details": {
-        "s": 2,
-        "n": [430, 34, 18],
-        "i": [
-          [2, "salmon fillet|s"],
-          [2, "tbsp honey"],
-          [1, "tbsp soy sauce"],
-          [1, "tbsp sesame seeds"],
-          [1, "garlic clove|s"]
-        ],
-        "st": [
-          ["Whisk honey, soy sauce and grated garlic into a glaze."],
-          ["Brush the glaze over the salmon."],
-          ["Bake at 200°C (400°F) until the salmon flakes easily.", 12],
-          ["Sprinkle with sesame seeds and serve."]
-        ]
-      }
-    },
-    {
-      "id": 5,
-      "title": "Veggie grain bowl",
-      "time": 15,
-      "difficulty": "Medium",
-      "diet": ["Vegetarian", "Vegan"],
-      "cuisine": "American",
-      "ingredients": ["quinoa", "spinach", "avocado", "lemon", "chickpeas"],
-      "img": "teal",
-      "details": {
-        "s": 2,
-        "n": [390, 14, 52],
-        "i": [
-          [1, "cup|s quinoa"],
-          [1, "can chickpeas"],
-          [1, "avocado|s"],
-          [1, "lemon|s"],
-          [0, "Spinach"]
-        ],
-        "st": [
-          ["Cook the quinoa in twice its volume of water.", 12],
-          ["Warm the chickpeas in a pan with a pinch of salt."],
-          [
-            "Build the bowls with quinoa, spinach, chickpeas and sliced avocado."
-          ],
-          ["Dress with lemon juice and olive oil."]
-        ]
-      }
-    },
-    {
-      "id": 6,
-      "title": "Mushroom risotto",
-      "time": 45,
-      "difficulty": "Easy",
-      "diet": ["Vegetarian", "Gluten-free"],
-      "cuisine": "Italian",
-      "ingredients": ["rice", "mushroom", "onion", "garlic", "parmesan"],
-      "img": "brown",
-      "details": {
-        "s": 4,
-        "n": [460, 12, 70],
-        "i": [
-          [300, "g risotto rice"],
-          [250, "g mushrooms"],
-          [1, "onion|s"],
-          [1, "litre warm stock"],
-          [40, "g parmesan"]
-        ],
-        "st": [
-          ["Fry the mushrooms until golden, then set aside.", 6],
-          ["Cook the onion, then toast the rice for a minute."],
-          ["Add stock a ladle at a time, stirring often.", 20],
-          ["Stir in the mushrooms and parmesan. Serve."]
-        ]
-      }
-    },
-    {
-      "id": 7,
-      "title": "Chickpea curry",
-      "time": 40,
-      "difficulty": "Easy",
-      "diet": ["Vegetarian", "Vegan", "Gluten-free"],
-      "cuisine": "Indian",
-      "ingredients": ["chickpeas", "tomato", "onion", "garlic", "coconut milk"],
-      "img": "orange",
-      "details": {
-        "s": 4,
-        "n": [410, 15, 55],
-        "i": [
-          [2, "can|s chickpeas"],
-          [400, "ml coconut milk"],
-          [1, "onion|s"],
-          [3, "garlic clove|s"],
-          [2, "tomato|es"]
-        ],
-        "st": [
-          ["Fry the onion and garlic with curry spices.", 6],
-          ["Add chopped tomatoes and cook down.", 8],
-          ["Stir in chickpeas and coconut milk, then simmer.", 20],
-          ["Serve with rice or flatbread."]
-        ]
-      }
-    },
-    {
-      "id": 8,
-      "title": "Berry oat pancakes",
-      "time": 20,
-      "difficulty": "Medium",
-      "diet": ["Vegetarian"],
-      "cuisine": "American",
-      "ingredients": ["oats", "berries", "egg", "milk", "honey"],
-      "img": "green",
-      "details": {
-        "s": 4,
-        "n": [340, 10, 48],
-        "i": [
-          [1.5, "cup|s oats"],
-          [1, "cup|s milk"],
-          [2, "egg|s"],
-          [1, "cup|s berries"],
-          [1, "tbsp honey"]
-        ],
-        "st": [
-          ["Blend oats, milk and eggs into a batter. Rest it.", 5],
-          ["Cook spoonfuls in a lightly oiled pan until bubbles form.", 10],
-          ["Flip and cook until golden."],
-          ["Top with berries and honey."]
-        ]
-      }
-    },
-    {
-      "id": 9,
-      "title": "Greek quinoa salad",
-      "time": 10,
-      "difficulty": "Easy",
-      "diet": ["Vegetarian", "Gluten-free"],
-      "cuisine": "Mediterranean",
-      "ingredients": ["quinoa", "cucumber", "tomato", "feta", "lemon"],
-      "img": "red",
-      "details": {
-        "s": 2,
-        "n": [310, 11, 38],
-        "i": [
-          [1, "cup|s quinoa"],
-          [1, "cucumber|s"],
-          [2, "tomato|es"],
-          [100, "g feta"],
-          [1, "lemon|s"]
-        ],
-        "st": [
-          ["Cook and cool the quinoa.", 10],
-          ["Chop the cucumber and tomatoes."],
-          ["Combine with crumbled feta."],
-          ["Dress with lemon juice and olive oil."]
-        ]
-      }
-    },
-    {
-      "id": 10,
-      "title": "Lemon garlic chicken rice",
-      "time": 40,
-      "difficulty": "Easy",
-      "diet": [],
-      "cuisine": "Mediterranean",
-      "ingredients": ["chicken", "lemon", "garlic", "rice", "onion"],
-      "img": "yellow",
-      "details": {
-        "s": 4,
-        "n": [520, 36, 52],
-        "i": [
-          [4, "chicken thigh|s"],
-          [1.5, "cup|s rice"],
-          [2, "lemon|s"],
-          [4, "garlic clove|s"],
-          [1, "onion|s"]
-        ],
-        "st": [
-          ["Brown the chicken in a deep pan, then set aside.", 8],
-          ["Cook the onion and garlic, then stir in the rice."],
-          ["Add water, lemon juice and the chicken. Cover and cook.", 25],
-          ["Rest for a few minutes, fluff the rice and serve."]
-        ]
-      }
-    },
-    {
-      "id": 11,
-      "title": "Shakshuka",
-      "time": 30,
-      "difficulty": "Easy",
-      "diet": ["Vegetarian", "Gluten-free"],
-      "cuisine": "Middle Eastern",
-      "ingredients": ["olive oil", "onion", "garlic", "tomatoes", "egg"],
-      "img": "red",
-      "type": "Dinner",
-      "details": {
-        "s": 2,
-        "n": [330, 18, 22],
-        "i": [
-          [1, "tbsp olive oil"],
-          [1, "onion|s"],
-          [3, "garlic clove|s"],
-          [400, "g canned tomatoes"],
-          [4, "egg|s"]
-        ],
-        "st": [
-          [
-            "Soften the chopped onion and garlic in the oil with a pinch of paprika and cumin.",
-            5
-          ],
-          ["Add the tomatoes and simmer until thick.", 10],
-          ["Make four wells, crack in the eggs and cover the pan.", 8],
-          ["Serve with crusty bread."]
-        ]
-      }
-    },
-    {
-      "id": 12,
-      "title": "Veggie fried rice",
-      "time": 20,
-      "difficulty": "Easy",
-      "diet": ["Vegetarian", "Vegan"],
-      "cuisine": "Asian",
-      "ingredients": ["rice", "carrot", "peas", "soy sauce", "garlic"],
-      "img": "orange",
-      "type": "Dinner",
-      "details": {
-        "s": 4,
-        "n": [380, 10, 62],
-        "i": [
-          [2, "cup|s cooked rice"],
-          [2, "carrot|s"],
-          [1, "cup|s peas"],
-          [3, "tbsp soy sauce"],
-          [2, "garlic clove|s"]
-        ],
-        "st": [
-          ["Stir-fry the diced carrot and garlic in a hot pan.", 5],
-          ["Add the peas and rice and fry until hot.", 5],
-          ["Splash in the soy sauce and toss well."],
-          ["Serve straight away."]
-        ]
-      }
-    },
-    {
-      "id": 13,
-      "title": "Beef tacos",
-      "time": 25,
-      "difficulty": "Easy",
-      "diet": [],
-      "cuisine": "Mexican",
-      "ingredients": ["minced beef", "tortilla", "onion", "tomato", "avocado"],
-      "img": "orange",
-      "type": "Dinner",
-      "details": {
-        "s": 4,
-        "n": [450, 28, 34],
-        "i": [
-          [500, "g minced beef"],
-          [8, "tortilla|s"],
-          [1, "onion|s"],
-          [2, "tomato|es"],
-          [1, "avocado|s"]
-        ],
-        "st": [
-          ["Brown the beef with the chopped onion and taco spices.", 10],
-          ["Warm the tortillas in a dry pan."],
-          ["Dice the tomatoes and avocado."],
-          ["Fill the tortillas and serve."]
-        ]
-      }
-    },
-    {
-      "id": 14,
-      "title": "Creamy mushroom pasta",
-      "time": 25,
-      "difficulty": "Easy",
-      "diet": ["Vegetarian"],
-      "cuisine": "Italian",
-      "ingredients": ["pasta", "mushrooms", "cream", "garlic", "parmesan"],
-      "img": "brown",
-      "type": "Dinner",
-      "details": {
-        "s": 4,
-        "n": [540, 17, 70],
-        "i": [
-          [400, "g pasta"],
-          [250, "g mushrooms"],
-          [200, "ml cream"],
-          [2, "garlic clove|s"],
-          [40, "g parmesan"]
-        ],
-        "st": [
-          ["Cook the pasta in salted water.", 10],
-          ["Fry the mushrooms and garlic until golden.", 6],
-          ["Stir in the cream and parmesan and simmer.", 3],
-          ["Toss with the pasta and serve."]
-        ]
-      }
-    },
-    {
-      "id": 15,
-      "title": "Chicken stir-fry",
-      "time": 20,
-      "difficulty": "Easy",
-      "diet": [],
-      "cuisine": "Asian",
-      "ingredients": [
-        "chicken",
-        "bell pepper",
-        "carrot",
-        "soy sauce",
-        "ginger"
-      ],
-      "img": "green",
-      "type": "Dinner",
-      "details": {
-        "s": 4,
-        "n": [360, 34, 22],
-        "i": [
-          [400, "g chicken breast"],
-          [1, "bell pepper|s"],
-          [2, "carrot|s"],
-          [3, "tbsp soy sauce"],
-          [1, "tbsp ginger"]
-        ],
-        "st": [
-          ["Slice the chicken, pepper and carrots into thin strips."],
-          ["Stir-fry the chicken until cooked through.", 7],
-          ["Add the vegetables, ginger and soy sauce.", 5],
-          ["Serve with rice or noodles."]
-        ]
-      }
-    },
-    {
-      "id": 16,
-      "title": "Avocado toast with egg",
-      "time": 10,
-      "difficulty": "Easy",
-      "diet": ["Vegetarian"],
-      "cuisine": "American",
-      "ingredients": ["bread", "avocado", "egg", "lemon"],
-      "img": "yellow",
-      "type": "Breakfast",
-      "details": {
-        "s": 1,
-        "n": [380, 15, 32],
-        "i": [
-          [2, "slice|s bread"],
-          [1, "avocado|s"],
-          [1, "egg|s"],
-          [1, "lemon|s"]
-        ],
-        "st": [
-          ["Toast the bread."],
-          ["Mash the avocado with a squeeze of lemon and salt."],
-          ["Fry or poach the egg.", 4],
-          ["Pile the avocado on the toast and top with the egg."]
-        ]
-      }
-    },
-    {
-      "id": 17,
-      "title": "Greek yogurt parfait",
-      "time": 10,
-      "difficulty": "Easy",
-      "diet": ["Vegetarian", "Gluten-free"],
-      "cuisine": "American",
-      "ingredients": ["yogurt", "berries", "honey", "nuts or seeds to top"],
-      "img": "yellow",
-      "type": "Breakfast",
-      "details": {
-        "s": 2,
-        "n": [290, 18, 40],
-        "i": [
-          [2, "cup|s yogurt"],
-          [1, "cup|s berries"],
-          [2, "tbsp honey"],
-          [0, "Nuts or seeds to top"]
-        ],
-        "st": [
-          ["Spoon yogurt into two glasses."],
-          ["Add a layer of berries."],
-          ["Drizzle with honey."],
-          ["Repeat the layers and top with nuts or seeds."]
-        ]
-      }
-    },
-    {
-      "id": 18,
-      "title": "Spinach and feta omelette",
-      "time": 10,
-      "difficulty": "Easy",
-      "diet": ["Vegetarian", "Gluten-free"],
-      "cuisine": "Mediterranean",
-      "ingredients": ["egg", "spinach", "feta", "butter"],
-      "img": "yellow",
-      "type": "Breakfast",
-      "details": {
-        "s": 1,
-        "n": [310, 21, 3],
-        "i": [
-          [3, "egg|s"],
-          [0, "Spinach"],
-          [50, "g feta"],
-          [1, "tsp butter"]
-        ],
-        "st": [
-          ["Whisk the eggs with a pinch of salt."],
-          ["Wilt the spinach in the butter.", 2],
-          ["Pour in the eggs and cook until nearly set.", 3],
-          ["Add the feta, fold and serve."]
-        ]
-      }
-    },
-    {
-      "id": 19,
-      "title": "Banana oat smoothie",
-      "time": 10,
-      "difficulty": "Easy",
-      "diet": ["Vegetarian"],
-      "cuisine": "American",
-      "ingredients": ["banana", "oats", "milk", "honey"],
-      "img": "green",
-      "type": "Breakfast",
-      "details": {
-        "s": 2,
-        "n": [260, 8, 48],
-        "i": [
-          [2, "banana|s"],
-          [1, "cup|s oats"],
-          [2, "cup|s milk"],
-          [1, "tbsp honey"]
-        ],
-        "st": [
-          ["Peel and slice the bananas."],
-          ["Add everything to a blender."],
-          ["Blend until smooth."],
-          ["Pour into glasses and serve cold."]
-        ]
-      }
-    },
-    {
-      "id": 20,
-      "title": "Red lentil soup",
-      "time": 40,
-      "difficulty": "Easy",
-      "diet": ["Vegetarian", "Vegan", "Gluten-free"],
-      "cuisine": "Middle Eastern",
-      "ingredients": [
-        "red lentils",
-        "onion",
-        "carrot",
-        "garlic",
-        "vegetable stock"
-      ],
-      "img": "orange",
-      "type": "Dinner",
-      "details": {
-        "s": 4,
-        "n": [290, 16, 44],
-        "i": [
-          [250, "g red lentils"],
-          [1, "onion|s"],
-          [2, "carrot|s"],
-          [3, "garlic clove|s"],
-          [1, "litre vegetable stock"]
-        ],
-        "st": [
-          ["Soften the onion, carrot and garlic with a little cumin.", 8],
-          ["Add the lentils and stock."],
-          ["Simmer until the lentils are soft.", 25],
-          ["Blend until smooth and season."]
-        ]
-      }
-    },
-    {
-      "id": 21,
-      "title": "Margherita pizza",
-      "time": 30,
-      "difficulty": "Medium",
-      "diet": ["Vegetarian"],
-      "cuisine": "Italian",
-      "ingredients": ["pizza base", "mozzarella", "tomato sauce", "basil"],
-      "img": "red",
-      "type": "Dinner",
-      "details": {
-        "s": 2,
-        "n": [620, 24, 82],
-        "i": [
-          [1, "pizza base|s"],
-          [200, "g mozzarella"],
-          [150, "ml tomato sauce"],
-          [0, "Fresh basil"]
-        ],
-        "st": [
-          ["Heat the oven to its highest setting."],
-          ["Spread the sauce over the base."],
-          ["Top with torn mozzarella."],
-          ["Bake until the crust is golden and the cheese bubbles.", 12],
-          ["Scatter with basil and serve."]
-        ]
-      }
-    },
-    {
-      "id": 22,
-      "title": "Chicken Caesar salad",
-      "time": 20,
-      "difficulty": "Easy",
-      "diet": [],
-      "cuisine": "American",
-      "ingredients": [
-        "chicken",
-        "romaine lettuce",
-        "parmesan",
-        "bread",
-        "caesar dressing"
-      ],
-      "img": "green",
-      "type": "Lunch",
-      "details": {
-        "s": 2,
-        "n": [480, 38, 16],
-        "i": [
-          [2, "chicken breast|s"],
-          [1, "romaine lettuce"],
-          [40, "g parmesan"],
-          [2, "slice|s bread"],
-          [3, "tbsp Caesar dressing"]
-        ],
-        "st": [
-          [
-            "Pan-fry the chicken until golden and cooked through, then slice.",
-            12
-          ],
-          ["Toast the bread and cut it into croutons."],
-          ["Toss the lettuce with the dressing."],
-          ["Top with chicken, croutons and parmesan."]
-        ]
-      }
-    },
-    {
-      "id": 23,
-      "title": "Tuna pasta salad",
-      "time": 15,
-      "difficulty": "Easy",
-      "diet": [],
-      "cuisine": "Mediterranean",
-      "ingredients": ["pasta", "tuna", "tomato", "cucumber", "lemon"],
-      "img": "teal",
-      "type": "Lunch",
-      "details": {
-        "s": 2,
-        "n": [470, 28, 56],
-        "i": [
-          [200, "g pasta"],
-          [1, "can tuna"],
-          [2, "tomato|es"],
-          [1, "cucumber|s"],
-          [1, "lemon|s"]
-        ],
-        "st": [
-          ["Cook the pasta and let it cool.", 10],
-          ["Chop the tomatoes and cucumber."],
-          ["Mix with the pasta and flaked tuna."],
-          ["Dress with lemon juice and olive oil."]
-        ]
-      }
-    },
-    {
-      "id": 24,
-      "title": "Hummus veggie wrap",
-      "time": 10,
-      "difficulty": "Easy",
-      "diet": ["Vegetarian", "Vegan"],
-      "cuisine": "Middle Eastern",
-      "ingredients": ["tortilla", "hummus", "cucumber", "carrot", "spinach"],
-      "img": "green",
-      "type": "Lunch",
-      "details": {
-        "s": 2,
-        "n": [340, 12, 48],
-        "i": [
-          [2, "tortilla|s"],
-          [4, "tbsp hummus"],
-          [1, "cucumber|s"],
-          [1, "carrot|s"],
-          [0, "Spinach"]
-        ],
-        "st": [
-          ["Spread the hummus over the tortillas."],
-          ["Slice the cucumber and carrot into sticks."],
-          ["Add the vegetables and spinach."],
-          ["Roll up tightly and cut in half."]
-        ]
-      }
-    },
-    {
-      "id": 25,
-      "title": "Slow beef stew",
-      "time": 75,
-      "difficulty": "Medium",
-      "diet": ["Gluten-free"],
-      "cuisine": "British",
-      "ingredients": ["beef", "carrot", "potato", "onion", "beef stock"],
-      "img": "brown",
-      "type": "Dinner",
-      "details": {
-        "s": 4,
-        "n": [480, 36, 32],
-        "i": [
-          [600, "g beef"],
-          [3, "carrot|s"],
-          [3, "potato|es"],
-          [1, "onion|s"],
-          [500, "ml beef stock"]
-        ],
-        "st": [
-          ["Brown the beef in batches.", 10],
-          ["Add the onion and carrots and cook briefly."],
-          ["Pour in the stock and bring to a simmer."],
-          ["Add the potatoes and cook gently until the beef is tender.", 50]
-        ]
-      }
-    },
-    {
-      "id": 26,
-      "title": "Baked salmon with asparagus",
-      "time": 25,
-      "difficulty": "Easy",
-      "diet": ["Gluten-free"],
-      "cuisine": "Mediterranean",
-      "ingredients": ["salmon", "asparagus", "lemon", "olive oil", "garlic"],
-      "img": "yellow",
-      "type": "Dinner",
-      "details": {
-        "s": 2,
-        "n": [410, 35, 8],
-        "i": [
-          [2, "salmon fillet|s"],
-          [1, "bunch asparagus"],
-          [1, "lemon|s"],
-          [2, "tbsp olive oil"],
-          [2, "garlic clove|s"]
-        ],
-        "st": [
-          ["Heat the oven to 200°C (400°F)."],
-          [
-            "Arrange the salmon and asparagus on a tray with the oil, garlic and lemon slices."
-          ],
-          ["Bake until the salmon flakes easily.", 15],
-          ["Serve with the pan juices."]
-        ]
-      }
-    },
-    {
-      "id": 27,
-      "title": "Vegetable lasagne",
-      "time": 60,
-      "difficulty": "Medium",
-      "diet": ["Vegetarian"],
-      "cuisine": "Italian",
-      "ingredients": [
-        "lasagne",
-        "courgette",
-        "ricotta",
-        "tomato sauce",
-        "mozzarella"
-      ],
-      "img": "red",
-      "type": "Dinner",
-      "details": {
-        "s": 6,
-        "n": [510, 22, 52],
-        "i": [
-          [9, "lasagne sheet|s"],
-          [2, "courgette|s"],
-          [250, "g ricotta"],
-          [500, "ml tomato sauce"],
-          [150, "g mozzarella"]
-        ],
-        "st": [
-          ["Roast the sliced courgettes until soft.", 15],
-          ["Layer sauce, pasta, courgette and ricotta in a dish."],
-          ["Finish with sauce and mozzarella."],
-          ["Bake until golden and bubbling.", 35]
-        ]
-      }
-    },
-    {
-      "id": 28,
-      "title": "Prawn pad thai",
-      "time": 30,
-      "difficulty": "Medium",
-      "diet": [],
-      "cuisine": "Thai",
-      "ingredients": ["rice noodles", "prawns", "egg", "fish sauce", "peanuts"],
-      "img": "orange",
-      "type": "Dinner",
-      "details": {
-        "s": 4,
-        "n": [520, 24, 68],
-        "i": [
-          [250, "g rice noodles"],
-          [250, "g prawns"],
-          [2, "egg|s"],
-          [3, "tbsp fish sauce"],
-          [2, "tbsp peanuts"]
-        ],
-        "st": [
-          ["Soak the noodles in hot water until soft.", 8],
-          ["Stir-fry the prawns until pink.", 4],
-          [
-            "Push aside, scramble the eggs, then add the noodles and fish sauce.",
-            4
-          ],
-          ["Serve topped with crushed peanuts."]
-        ]
-      }
-    },
-    {
-      "id": 29,
-      "title": "Black bean burrito bowl",
-      "time": 25,
-      "difficulty": "Easy",
-      "diet": ["Vegetarian", "Vegan", "Gluten-free"],
-      "cuisine": "Mexican",
-      "ingredients": ["rice", "black beans", "avocado", "tomato", "lime"],
-      "img": "teal",
-      "type": "Dinner",
-      "details": {
-        "s": 2,
-        "n": [440, 17, 66],
-        "i": [
-          [1, "cup|s rice"],
-          [1, "can black beans"],
-          [1, "avocado|s"],
-          [2, "tomato|es"],
-          [1, "lime|s"]
-        ],
-        "st": [
-          ["Cook the rice.", 15],
-          ["Warm the black beans with a pinch of cumin.", 5],
-          ["Dice the tomatoes and avocado."],
-          ["Build the bowls and squeeze lime over the top."]
-        ]
-      }
-    },
-    {
-      "id": 30,
-      "title": "Pumpkin soup",
-      "time": 35,
-      "difficulty": "Easy",
-      "diet": ["Vegetarian", "Vegan", "Gluten-free"],
-      "cuisine": "British",
-      "ingredients": [
-        "pumpkin",
-        "onion",
-        "garlic",
-        "vegetable stock",
-        "coconut milk"
-      ],
-      "img": "orange",
-      "type": "Dinner",
-      "details": {
-        "s": 4,
-        "n": [210, 4, 36],
-        "i": [
-          [800, "g pumpkin"],
-          [1, "onion|s"],
-          [2, "garlic clove|s"],
-          [500, "ml vegetable stock"],
-          [200, "ml coconut milk"]
-        ],
-        "st": [
-          ["Soften the onion and garlic.", 5],
-          ["Add the cubed pumpkin and stock and simmer until tender.", 20],
-          ["Blend with the coconut milk until smooth."],
-          ["Season and serve hot."]
-        ]
-      }
-    },
-    {
-      "id": 31,
-      "title": "Palak paneer",
-      "time": 35,
-      "difficulty": "Medium",
-      "diet": ["Vegetarian", "Gluten-free"],
-      "cuisine": "Indian",
-      "ingredients": ["spinach", "paneer", "onion", "tomato", "garlic"],
-      "img": "green",
-      "type": "Dinner",
-      "details": {
-        "s": 4,
-        "n": [380, 19, 16],
-        "i": [
-          [400, "g spinach"],
-          [250, "g paneer"],
-          [1, "onion|s"],
-          [2, "tomato|es"],
-          [2, "garlic clove|s"]
-        ],
-        "st": [
-          ["Blanch the spinach and blend it to a purée.", 4],
-          ["Fry the onion, garlic and tomatoes with garam masala.", 10],
-          ["Stir in the spinach purée and the cubed paneer."],
-          ["Simmer gently and serve with rice or naan.", 8]
-        ]
-      }
-    },
-    {
-      "id": 32,
-      "title": "French toast",
-      "time": 15,
-      "difficulty": "Easy",
-      "diet": ["Vegetarian"],
-      "cuisine": "American",
-      "ingredients": ["bread", "egg", "milk", "butter"],
-      "img": "yellow",
-      "type": "Breakfast",
-      "details": {
-        "s": 2,
-        "n": [400, 15, 46],
-        "i": [
-          [4, "slice|s bread"],
-          [2, "egg|s"],
-          [100, "ml milk"],
-          [1, "tbsp butter"]
-        ],
-        "st": [
-          ["Whisk the eggs and milk with a pinch of cinnamon."],
-          ["Dip each slice of bread in the mixture."],
-          ["Fry in butter until golden on both sides.", 6],
-          ["Serve with fruit or syrup."]
-        ]
-      }
-    },
-    {
-      "id": 33,
-      "title": "Lemon garlic prawns",
-      "time": 15,
-      "difficulty": "Easy",
-      "diet": ["Gluten-free"],
-      "cuisine": "Spanish",
-      "ingredients": ["prawns", "garlic", "lemon", "olive oil", "parsley"],
-      "img": "red",
-      "type": "Dinner",
-      "details": {
-        "s": 2,
-        "n": [260, 30, 6],
-        "i": [
-          [300, "g prawns"],
-          [4, "garlic clove|s"],
-          [1, "lemon|s"],
-          [2, "tbsp olive oil"],
-          [0, "Fresh parsley"]
-        ],
-        "st": [
-          ["Warm the oil and sliced garlic gently.", 2],
-          ["Add the prawns and cook until pink.", 4],
-          ["Squeeze in the lemon juice."],
-          ["Scatter with parsley and serve with bread."]
-        ]
-      }
-    },
-    {
-      "id": 34,
-      "title": "Chicken noodle soup",
-      "time": 40,
-      "difficulty": "Easy",
-      "diet": [],
-      "cuisine": "British",
-      "ingredients": [
-        "chicken",
-        "egg noodles",
-        "carrot",
-        "onion",
-        "chicken stock"
-      ],
-      "img": "yellow",
-      "type": "Dinner",
-      "details": {
-        "s": 4,
-        "n": [320, 28, 30],
-        "i": [
-          [2, "chicken breast|s"],
-          [150, "g egg noodles"],
-          [2, "carrot|s"],
-          [1, "onion|s"],
-          [1, "litre chicken stock"]
-        ],
-        "st": [
-          ["Simmer the chicken in the stock with the onion and carrots.", 20],
-          ["Lift out the chicken and shred it."],
-          ["Add the noodles and cook.", 5],
-          ["Return the chicken, season and serve."]
-        ]
-      }
-    },
-    {
-      "id": 35,
-      "title": "Caprese salad",
-      "time": 10,
-      "difficulty": "Easy",
-      "diet": ["Vegetarian", "Gluten-free"],
-      "cuisine": "Italian",
-      "ingredients": [
-        "tomato",
-        "mozzarella",
-        "basil",
-        "olive oil",
-        "balsamic vinegar"
-      ],
-      "img": "red",
-      "type": "Lunch",
-      "details": {
-        "s": 2,
-        "n": [320, 18, 8],
-        "i": [
-          [3, "tomato|es"],
-          [200, "g mozzarella"],
-          [0, "Fresh basil"],
-          [2, "tbsp olive oil"],
-          [0, "Balsamic vinegar"]
-        ],
-        "st": [
-          ["Slice the tomatoes and mozzarella."],
-          ["Arrange them in overlapping layers."],
-          ["Tuck in the basil leaves."],
-          ["Drizzle with oil and balsamic vinegar."]
-        ]
-      }
-    },
-    {
-      "id": 36,
-      "title": "Overnight oats",
-      "time": 10,
-      "difficulty": "Easy",
-      "diet": ["Vegetarian"],
-      "cuisine": "American",
-      "ingredients": ["oats", "milk", "banana", "honey"],
-      "img": "green",
-      "type": "Breakfast",
-      "details": {
-        "s": 2,
-        "n": [330, 12, 52],
-        "i": [
-          [1, "cup|s oats"],
-          [1, "cup|s milk"],
-          [1, "banana|s"],
-          [1, "tbsp honey"]
-        ],
-        "st": [
-          ["Mix the oats, milk and honey in a jar."],
-          ["Cover and chill overnight."],
-          ["Slice the banana on top."],
-          ["Serve cold or warm it briefly."]
-        ]
-      }
-    }
-  ]
+ "recipes": [
+  {
+   "id": 1,
+   "title": "Lemon herb chicken",
+   "time": 35,
+   "difficulty": "Easy",
+   "diet": [],
+   "cuisine": "Mediterranean",
+   "ingredients": [
+    "chicken",
+    "lemon",
+    "garlic",
+    "olive oil",
+    "thyme"
+   ],
+   "img": "images/1.jpg",
+   "details": {
+    "s": 4,
+    "n": [
+     420,
+     38,
+     9
+    ],
+    "i": [
+     [
+      4,
+      "chicken thigh|s"
+     ],
+     [
+      2,
+      "lemon|s"
+     ],
+     [
+      3,
+      "garlic clove|s"
+     ],
+     [
+      1,
+      "tbsp olive oil"
+     ],
+     [
+      0,
+      "Fresh thyme"
+     ]
+    ],
+    "st": [
+     [
+      "Zest one lemon and juice both. Mix with minced garlic, olive oil and thyme."
+     ],
+     [
+      "Coat the chicken in the marinade and let it rest.",
+      10
+     ],
+     [
+      "Roast at 200\u00b0C (400\u00b0F) until golden and cooked through.",
+      25
+     ],
+     [
+      "Rest for a few minutes, then serve with the pan juices.",
+      5
+     ]
+    ]
+   }
+  },
+  {
+   "id": 2,
+   "title": "Garden pesto pasta",
+   "time": 20,
+   "difficulty": "Medium",
+   "diet": [
+    "Vegetarian"
+   ],
+   "cuisine": "Italian",
+   "ingredients": [
+    "pasta",
+    "basil",
+    "garlic",
+    "olive oil",
+    "parmesan"
+   ],
+   "img": "images/2.jpg",
+   "details": {
+    "s": 4,
+    "n": [
+     520,
+     16,
+     68
+    ],
+    "i": [
+     [
+      400,
+      "g pasta"
+     ],
+     [
+      1,
+      "cup|s fresh basil"
+     ],
+     [
+      2,
+      "garlic clove|s"
+     ],
+     [
+      3,
+      "tbsp olive oil"
+     ],
+     [
+      50,
+      "g parmesan"
+     ]
+    ],
+    "st": [
+     [
+      "Boil the pasta in well-salted water until just tender.",
+      10
+     ],
+     [
+      "Blend basil, garlic, olive oil and parmesan into a rough pesto."
+     ],
+     [
+      "Toss the pasta with the pesto and a splash of pasta water."
+     ],
+     [
+      "Serve straight away with extra parmesan."
+     ]
+    ]
+   }
+  },
+  {
+   "id": 3,
+   "title": "Tomato basil soup",
+   "time": 30,
+   "difficulty": "Easy",
+   "diet": [
+    "Vegetarian",
+    "Vegan",
+    "Gluten-free"
+   ],
+   "cuisine": "Italian",
+   "ingredients": [
+    "tomato",
+    "basil",
+    "onion",
+    "garlic"
+   ],
+   "img": "images/3.jpg",
+   "details": {
+    "s": 4,
+    "n": [
+     180,
+     5,
+     28
+    ],
+    "i": [
+     [
+      800,
+      "g canned tomatoes"
+     ],
+     [
+      1,
+      "onion|s"
+     ],
+     [
+      3,
+      "garlic clove|s"
+     ],
+     [
+      500,
+      "ml vegetable stock"
+     ],
+     [
+      0,
+      "Fresh basil"
+     ]
+    ],
+    "st": [
+     [
+      "Soften the chopped onion and garlic in a little oil.",
+      5
+     ],
+     [
+      "Add the tomatoes and stock, then simmer.",
+      20
+     ],
+     [
+      "Blend until smooth with the basil."
+     ],
+     [
+      "Season to taste and serve hot."
+     ]
+    ]
+   }
+  },
+  {
+   "id": 4,
+   "title": "Honey sesame salmon",
+   "time": 25,
+   "difficulty": "Easy",
+   "diet": [
+    "Gluten-free"
+   ],
+   "cuisine": "Asian",
+   "ingredients": [
+    "salmon",
+    "honey",
+    "sesame",
+    "soy sauce",
+    "garlic"
+   ],
+   "img": "images/4.jpg",
+   "details": {
+    "s": 2,
+    "n": [
+     430,
+     34,
+     18
+    ],
+    "i": [
+     [
+      2,
+      "salmon fillet|s"
+     ],
+     [
+      2,
+      "tbsp honey"
+     ],
+     [
+      1,
+      "tbsp soy sauce"
+     ],
+     [
+      1,
+      "tbsp sesame seeds"
+     ],
+     [
+      1,
+      "garlic clove|s"
+     ]
+    ],
+    "st": [
+     [
+      "Whisk honey, soy sauce and grated garlic into a glaze."
+     ],
+     [
+      "Brush the glaze over the salmon."
+     ],
+     [
+      "Bake at 200\u00b0C (400\u00b0F) until the salmon flakes easily.",
+      12
+     ],
+     [
+      "Sprinkle with sesame seeds and serve."
+     ]
+    ]
+   }
+  },
+  {
+   "id": 5,
+   "title": "Veggie grain bowl",
+   "time": 15,
+   "difficulty": "Medium",
+   "diet": [
+    "Vegetarian",
+    "Vegan"
+   ],
+   "cuisine": "American",
+   "ingredients": [
+    "quinoa",
+    "spinach",
+    "avocado",
+    "lemon",
+    "chickpeas"
+   ],
+   "img": "images/26.jpg",
+   "details": {
+    "s": 2,
+    "n": [
+     390,
+     14,
+     52
+    ],
+    "i": [
+     [
+      1,
+      "cup|s quinoa"
+     ],
+     [
+      1,
+      "can chickpeas"
+     ],
+     [
+      1,
+      "avocado|s"
+     ],
+     [
+      1,
+      "lemon|s"
+     ],
+     [
+      0,
+      "Spinach"
+     ]
+    ],
+    "st": [
+     [
+      "Cook the quinoa in twice its volume of water.",
+      12
+     ],
+     [
+      "Warm the chickpeas in a pan with a pinch of salt."
+     ],
+     [
+      "Build the bowls with quinoa, spinach, chickpeas and sliced avocado."
+     ],
+     [
+      "Dress with lemon juice and olive oil."
+     ]
+    ]
+   }
+  },
+  {
+   "id": 6,
+   "title": "Mushroom risotto",
+   "time": 45,
+   "difficulty": "Easy",
+   "diet": [
+    "Vegetarian",
+    "Gluten-free"
+   ],
+   "cuisine": "Italian",
+   "ingredients": [
+    "rice",
+    "mushroom",
+    "onion",
+    "garlic",
+    "parmesan"
+   ],
+   "img": "images/17.jpg",
+   "details": {
+    "s": 4,
+    "n": [
+     460,
+     12,
+     70
+    ],
+    "i": [
+     [
+      300,
+      "g risotto rice"
+     ],
+     [
+      250,
+      "g mushrooms"
+     ],
+     [
+      1,
+      "onion|s"
+     ],
+     [
+      1,
+      "litre warm stock"
+     ],
+     [
+      40,
+      "g parmesan"
+     ]
+    ],
+    "st": [
+     [
+      "Fry the mushrooms until golden, then set aside.",
+      6
+     ],
+     [
+      "Cook the onion, then toast the rice for a minute."
+     ],
+     [
+      "Add stock a ladle at a time, stirring often.",
+      20
+     ],
+     [
+      "Stir in the mushrooms and parmesan. Serve."
+     ]
+    ]
+   }
+  },
+  {
+   "id": 7,
+   "title": "Chickpea curry",
+   "time": 40,
+   "difficulty": "Easy",
+   "diet": [
+    "Vegetarian",
+    "Vegan",
+    "Gluten-free"
+   ],
+   "cuisine": "Indian",
+   "ingredients": [
+    "chickpeas",
+    "tomato",
+    "onion",
+    "garlic",
+    "coconut milk"
+   ],
+   "img": "images/7.jpg",
+   "details": {
+    "s": 4,
+    "n": [
+     410,
+     15,
+     55
+    ],
+    "i": [
+     [
+      2,
+      "can|s chickpeas"
+     ],
+     [
+      400,
+      "ml coconut milk"
+     ],
+     [
+      1,
+      "onion|s"
+     ],
+     [
+      3,
+      "garlic clove|s"
+     ],
+     [
+      2,
+      "tomato|es"
+     ]
+    ],
+    "st": [
+     [
+      "Fry the onion and garlic with curry spices.",
+      6
+     ],
+     [
+      "Add chopped tomatoes and cook down.",
+      8
+     ],
+     [
+      "Stir in chickpeas and coconut milk, then simmer.",
+      20
+     ],
+     [
+      "Serve with rice or flatbread."
+     ]
+    ]
+   }
+  },
+  {
+   "id": 8,
+   "title": "Berry oat pancakes",
+   "time": 20,
+   "difficulty": "Medium",
+   "diet": [
+    "Vegetarian"
+   ],
+   "cuisine": "American",
+   "ingredients": [
+    "oats",
+    "berries",
+    "egg",
+    "milk",
+    "honey"
+   ],
+   "img": "images/8.jpg",
+   "details": {
+    "s": 4,
+    "n": [
+     340,
+     10,
+     48
+    ],
+    "i": [
+     [
+      1.5,
+      "cup|s oats"
+     ],
+     [
+      1,
+      "cup|s milk"
+     ],
+     [
+      2,
+      "egg|s"
+     ],
+     [
+      1,
+      "cup|s berries"
+     ],
+     [
+      1,
+      "tbsp honey"
+     ]
+    ],
+    "st": [
+     [
+      "Blend oats, milk and eggs into a batter. Rest it.",
+      5
+     ],
+     [
+      "Cook spoonfuls in a lightly oiled pan until bubbles form.",
+      10
+     ],
+     [
+      "Flip and cook until golden."
+     ],
+     [
+      "Top with berries and honey."
+     ]
+    ]
+   }
+  },
+  {
+   "id": 9,
+   "title": "Greek quinoa salad",
+   "time": 10,
+   "difficulty": "Easy",
+   "diet": [
+    "Vegetarian",
+    "Gluten-free"
+   ],
+   "cuisine": "Mediterranean",
+   "ingredients": [
+    "quinoa",
+    "cucumber",
+    "tomato",
+    "feta",
+    "lemon"
+   ],
+   "img": "images/9.jpg",
+   "details": {
+    "s": 2,
+    "n": [
+     310,
+     11,
+     38
+    ],
+    "i": [
+     [
+      1,
+      "cup|s quinoa"
+     ],
+     [
+      1,
+      "cucumber|s"
+     ],
+     [
+      2,
+      "tomato|es"
+     ],
+     [
+      100,
+      "g feta"
+     ],
+     [
+      1,
+      "lemon|s"
+     ]
+    ],
+    "st": [
+     [
+      "Cook and cool the quinoa.",
+      10
+     ],
+     [
+      "Chop the cucumber and tomatoes."
+     ],
+     [
+      "Combine with crumbled feta."
+     ],
+     [
+      "Dress with lemon juice and olive oil."
+     ]
+    ]
+   }
+  },
+  {
+   "id": 10,
+   "title": "Lemon garlic chicken rice",
+   "time": 40,
+   "difficulty": "Easy",
+   "diet": [],
+   "cuisine": "Mediterranean",
+   "ingredients": [
+    "chicken",
+    "lemon",
+    "garlic",
+    "rice",
+    "onion"
+   ],
+   "img": "images/33.jpg",
+   "details": {
+    "s": 4,
+    "n": [
+     520,
+     36,
+     52
+    ],
+    "i": [
+     [
+      4,
+      "chicken thigh|s"
+     ],
+     [
+      1.5,
+      "cup|s rice"
+     ],
+     [
+      2,
+      "lemon|s"
+     ],
+     [
+      4,
+      "garlic clove|s"
+     ],
+     [
+      1,
+      "onion|s"
+     ]
+    ],
+    "st": [
+     [
+      "Brown the chicken in a deep pan, then set aside.",
+      8
+     ],
+     [
+      "Cook the onion and garlic, then stir in the rice."
+     ],
+     [
+      "Add water, lemon juice and the chicken. Cover and cook.",
+      25
+     ],
+     [
+      "Rest for a few minutes, fluff the rice and serve."
+     ]
+    ]
+   }
+  },
+  {
+   "id": 11,
+   "title": "Shakshuka",
+   "time": 30,
+   "difficulty": "Easy",
+   "diet": [
+    "Vegetarian",
+    "Gluten-free"
+   ],
+   "cuisine": "Middle Eastern",
+   "ingredients": [
+    "olive oil",
+    "onion",
+    "garlic",
+    "tomatoes",
+    "egg"
+   ],
+   "img": "images/11.jpg",
+   "type": "Dinner",
+   "details": {
+    "s": 2,
+    "n": [
+     330,
+     18,
+     22
+    ],
+    "i": [
+     [
+      1,
+      "tbsp olive oil"
+     ],
+     [
+      1,
+      "onion|s"
+     ],
+     [
+      3,
+      "garlic clove|s"
+     ],
+     [
+      400,
+      "g canned tomatoes"
+     ],
+     [
+      4,
+      "egg|s"
+     ]
+    ],
+    "st": [
+     [
+      "Soften the chopped onion and garlic in the oil with a pinch of paprika and cumin.",
+      5
+     ],
+     [
+      "Add the tomatoes and simmer until thick.",
+      10
+     ],
+     [
+      "Make four wells, crack in the eggs and cover the pan.",
+      8
+     ],
+     [
+      "Serve with crusty bread."
+     ]
+    ]
+   }
+  },
+  {
+   "id": 12,
+   "title": "Veggie fried rice",
+   "time": 20,
+   "difficulty": "Easy",
+   "diet": [
+    "Vegetarian",
+    "Vegan"
+   ],
+   "cuisine": "Asian",
+   "ingredients": [
+    "rice",
+    "carrot",
+    "peas",
+    "soy sauce",
+    "garlic"
+   ],
+   "img": "images/29.jpg",
+   "type": "Dinner",
+   "details": {
+    "s": 4,
+    "n": [
+     380,
+     10,
+     62
+    ],
+    "i": [
+     [
+      2,
+      "cup|s cooked rice"
+     ],
+     [
+      2,
+      "carrot|s"
+     ],
+     [
+      1,
+      "cup|s peas"
+     ],
+     [
+      3,
+      "tbsp soy sauce"
+     ],
+     [
+      2,
+      "garlic clove|s"
+     ]
+    ],
+    "st": [
+     [
+      "Stir-fry the diced carrot and garlic in a hot pan.",
+      5
+     ],
+     [
+      "Add the peas and rice and fry until hot.",
+      5
+     ],
+     [
+      "Splash in the soy sauce and toss well."
+     ],
+     [
+      "Serve straight away."
+     ]
+    ]
+   }
+  },
+  {
+   "id": 13,
+   "title": "Beef tacos",
+   "time": 25,
+   "difficulty": "Easy",
+   "diet": [],
+   "cuisine": "Mexican",
+   "ingredients": [
+    "minced beef",
+    "tortilla",
+    "onion",
+    "tomato",
+    "avocado"
+   ],
+   "img": "images/13.jpg",
+   "type": "Dinner",
+   "details": {
+    "s": 4,
+    "n": [
+     450,
+     28,
+     34
+    ],
+    "i": [
+     [
+      500,
+      "g minced beef"
+     ],
+     [
+      8,
+      "tortilla|s"
+     ],
+     [
+      1,
+      "onion|s"
+     ],
+     [
+      2,
+      "tomato|es"
+     ],
+     [
+      1,
+      "avocado|s"
+     ]
+    ],
+    "st": [
+     [
+      "Brown the beef with the chopped onion and taco spices.",
+      10
+     ],
+     [
+      "Warm the tortillas in a dry pan."
+     ],
+     [
+      "Dice the tomatoes and avocado."
+     ],
+     [
+      "Fill the tortillas and serve."
+     ]
+    ]
+   }
+  },
+  {
+   "id": 14,
+   "title": "Creamy mushroom pasta",
+   "time": 25,
+   "difficulty": "Easy",
+   "diet": [
+    "Vegetarian"
+   ],
+   "cuisine": "Italian",
+   "ingredients": [
+    "pasta",
+    "mushrooms",
+    "cream",
+    "garlic",
+    "parmesan"
+   ],
+   "img": "images/23.jpg",
+   "type": "Dinner",
+   "details": {
+    "s": 4,
+    "n": [
+     540,
+     17,
+     70
+    ],
+    "i": [
+     [
+      400,
+      "g pasta"
+     ],
+     [
+      250,
+      "g mushrooms"
+     ],
+     [
+      200,
+      "ml cream"
+     ],
+     [
+      2,
+      "garlic clove|s"
+     ],
+     [
+      40,
+      "g parmesan"
+     ]
+    ],
+    "st": [
+     [
+      "Cook the pasta in salted water.",
+      10
+     ],
+     [
+      "Fry the mushrooms and garlic until golden.",
+      6
+     ],
+     [
+      "Stir in the cream and parmesan and simmer.",
+      3
+     ],
+     [
+      "Toss with the pasta and serve."
+     ]
+    ]
+   }
+  },
+  {
+   "id": 15,
+   "title": "Chicken stir-fry",
+   "time": 20,
+   "difficulty": "Easy",
+   "diet": [],
+   "cuisine": "Asian",
+   "ingredients": [
+    "chicken",
+    "bell pepper",
+    "carrot",
+    "soy sauce",
+    "ginger"
+   ],
+   "img": "images/36.jpg",
+   "type": "Dinner",
+   "details": {
+    "s": 4,
+    "n": [
+     360,
+     34,
+     22
+    ],
+    "i": [
+     [
+      400,
+      "g chicken breast"
+     ],
+     [
+      1,
+      "bell pepper|s"
+     ],
+     [
+      2,
+      "carrot|s"
+     ],
+     [
+      3,
+      "tbsp soy sauce"
+     ],
+     [
+      1,
+      "tbsp ginger"
+     ]
+    ],
+    "st": [
+     [
+      "Slice the chicken, pepper and carrots into thin strips."
+     ],
+     [
+      "Stir-fry the chicken until cooked through.",
+      7
+     ],
+     [
+      "Add the vegetables, ginger and soy sauce.",
+      5
+     ],
+     [
+      "Serve with rice or noodles."
+     ]
+    ]
+   }
+  },
+  {
+   "id": 16,
+   "title": "Avocado toast with egg",
+   "time": 10,
+   "difficulty": "Easy",
+   "diet": [
+    "Vegetarian"
+   ],
+   "cuisine": "American",
+   "ingredients": [
+    "bread",
+    "avocado",
+    "egg",
+    "lemon"
+   ],
+   "img": "images/16.jpg",
+   "type": "Breakfast",
+   "details": {
+    "s": 1,
+    "n": [
+     380,
+     15,
+     32
+    ],
+    "i": [
+     [
+      2,
+      "slice|s bread"
+     ],
+     [
+      1,
+      "avocado|s"
+     ],
+     [
+      1,
+      "egg|s"
+     ],
+     [
+      1,
+      "lemon|s"
+     ]
+    ],
+    "st": [
+     [
+      "Toast the bread."
+     ],
+     [
+      "Mash the avocado with a squeeze of lemon and salt."
+     ],
+     [
+      "Fry or poach the egg.",
+      4
+     ],
+     [
+      "Pile the avocado on the toast and top with the egg."
+     ]
+    ]
+   }
+  },
+  {
+   "id": 17,
+   "title": "Greek yogurt parfait",
+   "time": 10,
+   "difficulty": "Easy",
+   "diet": [
+    "Vegetarian",
+    "Gluten-free"
+   ],
+   "cuisine": "American",
+   "ingredients": [
+    "yogurt",
+    "berries",
+    "honey",
+    "nuts or seeds to top"
+   ],
+   "img": "images/19.jpg",
+   "type": "Breakfast",
+   "details": {
+    "s": 2,
+    "n": [
+     290,
+     18,
+     40
+    ],
+    "i": [
+     [
+      2,
+      "cup|s yogurt"
+     ],
+     [
+      1,
+      "cup|s berries"
+     ],
+     [
+      2,
+      "tbsp honey"
+     ],
+     [
+      0,
+      "Nuts or seeds to top"
+     ]
+    ],
+    "st": [
+     [
+      "Spoon yogurt into two glasses."
+     ],
+     [
+      "Add a layer of berries."
+     ],
+     [
+      "Drizzle with honey."
+     ],
+     [
+      "Repeat the layers and top with nuts or seeds."
+     ]
+    ]
+   }
+  },
+  {
+   "id": 18,
+   "title": "Spinach and feta omelette",
+   "time": 10,
+   "difficulty": "Easy",
+   "diet": [
+    "Vegetarian",
+    "Gluten-free"
+   ],
+   "cuisine": "Mediterranean",
+   "ingredients": [
+    "egg",
+    "spinach",
+    "feta",
+    "butter"
+   ],
+   "img": "images/18.jpg",
+   "type": "Breakfast",
+   "details": {
+    "s": 1,
+    "n": [
+     310,
+     21,
+     3
+    ],
+    "i": [
+     [
+      3,
+      "egg|s"
+     ],
+     [
+      0,
+      "Spinach"
+     ],
+     [
+      50,
+      "g feta"
+     ],
+     [
+      1,
+      "tsp butter"
+     ]
+    ],
+    "st": [
+     [
+      "Whisk the eggs with a pinch of salt."
+     ],
+     [
+      "Wilt the spinach in the butter.",
+      2
+     ],
+     [
+      "Pour in the eggs and cook until nearly set.",
+      3
+     ],
+     [
+      "Add the feta, fold and serve."
+     ]
+    ]
+   }
+  },
+  {
+   "id": 19,
+   "title": "Banana oat smoothie",
+   "time": 10,
+   "difficulty": "Easy",
+   "diet": [
+    "Vegetarian"
+   ],
+   "cuisine": "American",
+   "ingredients": [
+    "banana",
+    "oats",
+    "milk",
+    "honey"
+   ],
+   "img": "images/19.jpg",
+   "type": "Breakfast",
+   "details": {
+    "s": 2,
+    "n": [
+     260,
+     8,
+     48
+    ],
+    "i": [
+     [
+      2,
+      "banana|s"
+     ],
+     [
+      1,
+      "cup|s oats"
+     ],
+     [
+      2,
+      "cup|s milk"
+     ],
+     [
+      1,
+      "tbsp honey"
+     ]
+    ],
+    "st": [
+     [
+      "Peel and slice the bananas."
+     ],
+     [
+      "Add everything to a blender."
+     ],
+     [
+      "Blend until smooth."
+     ],
+     [
+      "Pour into glasses and serve cold."
+     ]
+    ]
+   }
+  },
+  {
+   "id": 20,
+   "title": "Red lentil soup",
+   "time": 40,
+   "difficulty": "Easy",
+   "diet": [
+    "Vegetarian",
+    "Vegan",
+    "Gluten-free"
+   ],
+   "cuisine": "Middle Eastern",
+   "ingredients": [
+    "red lentils",
+    "onion",
+    "carrot",
+    "garlic",
+    "vegetable stock"
+   ],
+   "img": "images/20.jpg",
+   "type": "Dinner",
+   "details": {
+    "s": 4,
+    "n": [
+     290,
+     16,
+     44
+    ],
+    "i": [
+     [
+      250,
+      "g red lentils"
+     ],
+     [
+      1,
+      "onion|s"
+     ],
+     [
+      2,
+      "carrot|s"
+     ],
+     [
+      3,
+      "garlic clove|s"
+     ],
+     [
+      1,
+      "litre vegetable stock"
+     ]
+    ],
+    "st": [
+     [
+      "Soften the onion, carrot and garlic with a little cumin.",
+      8
+     ],
+     [
+      "Add the lentils and stock."
+     ],
+     [
+      "Simmer until the lentils are soft.",
+      25
+     ],
+     [
+      "Blend until smooth and season."
+     ]
+    ]
+   }
+  },
+  {
+   "id": 21,
+   "title": "Margherita pizza",
+   "time": 30,
+   "difficulty": "Medium",
+   "diet": [
+    "Vegetarian"
+   ],
+   "cuisine": "Italian",
+   "ingredients": [
+    "pizza base",
+    "mozzarella",
+    "tomato sauce",
+    "basil"
+   ],
+   "img": "images/21.jpg",
+   "type": "Dinner",
+   "details": {
+    "s": 2,
+    "n": [
+     620,
+     24,
+     82
+    ],
+    "i": [
+     [
+      1,
+      "pizza base|s"
+     ],
+     [
+      200,
+      "g mozzarella"
+     ],
+     [
+      150,
+      "ml tomato sauce"
+     ],
+     [
+      0,
+      "Fresh basil"
+     ]
+    ],
+    "st": [
+     [
+      "Heat the oven to its highest setting."
+     ],
+     [
+      "Spread the sauce over the base."
+     ],
+     [
+      "Top with torn mozzarella."
+     ],
+     [
+      "Bake until the crust is golden and the cheese bubbles.",
+      12
+     ],
+     [
+      "Scatter with basil and serve."
+     ]
+    ]
+   }
+  },
+  {
+   "id": 22,
+   "title": "Chicken Caesar salad",
+   "time": 20,
+   "difficulty": "Easy",
+   "diet": [],
+   "cuisine": "American",
+   "ingredients": [
+    "chicken",
+    "romaine lettuce",
+    "parmesan",
+    "bread",
+    "caesar dressing"
+   ],
+   "img": "images/22.jpg",
+   "type": "Lunch",
+   "details": {
+    "s": 2,
+    "n": [
+     480,
+     38,
+     16
+    ],
+    "i": [
+     [
+      2,
+      "chicken breast|s"
+     ],
+     [
+      1,
+      "romaine lettuce"
+     ],
+     [
+      40,
+      "g parmesan"
+     ],
+     [
+      2,
+      "slice|s bread"
+     ],
+     [
+      3,
+      "tbsp Caesar dressing"
+     ]
+    ],
+    "st": [
+     [
+      "Pan-fry the chicken until golden and cooked through, then slice.",
+      12
+     ],
+     [
+      "Toast the bread and cut it into croutons."
+     ],
+     [
+      "Toss the lettuce with the dressing."
+     ],
+     [
+      "Top with chicken, croutons and parmesan."
+     ]
+    ]
+   }
+  },
+  {
+   "id": 23,
+   "title": "Tuna pasta salad",
+   "time": 15,
+   "difficulty": "Easy",
+   "diet": [],
+   "cuisine": "Mediterranean",
+   "ingredients": [
+    "pasta",
+    "tuna",
+    "tomato",
+    "cucumber",
+    "lemon"
+   ],
+   "img": "images/23.jpg",
+   "type": "Lunch",
+   "details": {
+    "s": 2,
+    "n": [
+     470,
+     28,
+     56
+    ],
+    "i": [
+     [
+      200,
+      "g pasta"
+     ],
+     [
+      1,
+      "can tuna"
+     ],
+     [
+      2,
+      "tomato|es"
+     ],
+     [
+      1,
+      "cucumber|s"
+     ],
+     [
+      1,
+      "lemon|s"
+     ]
+    ],
+    "st": [
+     [
+      "Cook the pasta and let it cool.",
+      10
+     ],
+     [
+      "Chop the tomatoes and cucumber."
+     ],
+     [
+      "Mix with the pasta and flaked tuna."
+     ],
+     [
+      "Dress with lemon juice and olive oil."
+     ]
+    ]
+   }
+  },
+  {
+   "id": 24,
+   "title": "Hummus veggie wrap",
+   "time": 10,
+   "difficulty": "Easy",
+   "diet": [
+    "Vegetarian",
+    "Vegan"
+   ],
+   "cuisine": "Middle Eastern",
+   "ingredients": [
+    "tortilla",
+    "hummus",
+    "cucumber",
+    "carrot",
+    "spinach"
+   ],
+   "img": "images/24.jpg",
+   "type": "Lunch",
+   "details": {
+    "s": 2,
+    "n": [
+     340,
+     12,
+     48
+    ],
+    "i": [
+     [
+      2,
+      "tortilla|s"
+     ],
+     [
+      4,
+      "tbsp hummus"
+     ],
+     [
+      1,
+      "cucumber|s"
+     ],
+     [
+      1,
+      "carrot|s"
+     ],
+     [
+      0,
+      "Spinach"
+     ]
+    ],
+    "st": [
+     [
+      "Spread the hummus over the tortillas."
+     ],
+     [
+      "Slice the cucumber and carrot into sticks."
+     ],
+     [
+      "Add the vegetables and spinach."
+     ],
+     [
+      "Roll up tightly and cut in half."
+     ]
+    ]
+   }
+  },
+  {
+   "id": 25,
+   "title": "Slow beef stew",
+   "time": 75,
+   "difficulty": "Medium",
+   "diet": [
+    "Gluten-free"
+   ],
+   "cuisine": "British",
+   "ingredients": [
+    "beef",
+    "carrot",
+    "potato",
+    "onion",
+    "beef stock"
+   ],
+   "img": "images/25.jpg",
+   "type": "Dinner",
+   "details": {
+    "s": 4,
+    "n": [
+     480,
+     36,
+     32
+    ],
+    "i": [
+     [
+      600,
+      "g beef"
+     ],
+     [
+      3,
+      "carrot|s"
+     ],
+     [
+      3,
+      "potato|es"
+     ],
+     [
+      1,
+      "onion|s"
+     ],
+     [
+      500,
+      "ml beef stock"
+     ]
+    ],
+    "st": [
+     [
+      "Brown the beef in batches.",
+      10
+     ],
+     [
+      "Add the onion and carrots and cook briefly."
+     ],
+     [
+      "Pour in the stock and bring to a simmer."
+     ],
+     [
+      "Add the potatoes and cook gently until the beef is tender.",
+      50
+     ]
+    ]
+   }
+  },
+  {
+   "id": 26,
+   "title": "Baked salmon with asparagus",
+   "time": 25,
+   "difficulty": "Easy",
+   "diet": [
+    "Gluten-free"
+   ],
+   "cuisine": "Mediterranean",
+   "ingredients": [
+    "salmon",
+    "asparagus",
+    "lemon",
+    "olive oil",
+    "garlic"
+   ],
+   "img": "images/4.jpg",
+   "type": "Dinner",
+   "details": {
+    "s": 2,
+    "n": [
+     410,
+     35,
+     8
+    ],
+    "i": [
+     [
+      2,
+      "salmon fillet|s"
+     ],
+     [
+      1,
+      "bunch asparagus"
+     ],
+     [
+      1,
+      "lemon|s"
+     ],
+     [
+      2,
+      "tbsp olive oil"
+     ],
+     [
+      2,
+      "garlic clove|s"
+     ]
+    ],
+    "st": [
+     [
+      "Heat the oven to 200\u00b0C (400\u00b0F)."
+     ],
+     [
+      "Arrange the salmon and asparagus on a tray with the oil, garlic and lemon slices."
+     ],
+     [
+      "Bake until the salmon flakes easily.",
+      15
+     ],
+     [
+      "Serve with the pan juices."
+     ]
+    ]
+   }
+  },
+  {
+   "id": 27,
+   "title": "Vegetable lasagne",
+   "time": 60,
+   "difficulty": "Medium",
+   "diet": [
+    "Vegetarian"
+   ],
+   "cuisine": "Italian",
+   "ingredients": [
+    "lasagne",
+    "courgette",
+    "ricotta",
+    "tomato sauce",
+    "mozzarella"
+   ],
+   "img": "images/15.jpg",
+   "type": "Dinner",
+   "details": {
+    "s": 6,
+    "n": [
+     510,
+     22,
+     52
+    ],
+    "i": [
+     [
+      9,
+      "lasagne sheet|s"
+     ],
+     [
+      2,
+      "courgette|s"
+     ],
+     [
+      250,
+      "g ricotta"
+     ],
+     [
+      500,
+      "ml tomato sauce"
+     ],
+     [
+      150,
+      "g mozzarella"
+     ]
+    ],
+    "st": [
+     [
+      "Roast the sliced courgettes until soft.",
+      15
+     ],
+     [
+      "Layer sauce, pasta, courgette and ricotta in a dish."
+     ],
+     [
+      "Finish with sauce and mozzarella."
+     ],
+     [
+      "Bake until golden and bubbling.",
+      35
+     ]
+    ]
+   }
+  },
+  {
+   "id": 28,
+   "title": "Prawn pad thai",
+   "time": 30,
+   "difficulty": "Medium",
+   "diet": [],
+   "cuisine": "Thai",
+   "ingredients": [
+    "rice noodles",
+    "prawns",
+    "egg",
+    "fish sauce",
+    "peanuts"
+   ],
+   "img": "images/28.jpg",
+   "type": "Dinner",
+   "details": {
+    "s": 4,
+    "n": [
+     520,
+     24,
+     68
+    ],
+    "i": [
+     [
+      250,
+      "g rice noodles"
+     ],
+     [
+      250,
+      "g prawns"
+     ],
+     [
+      2,
+      "egg|s"
+     ],
+     [
+      3,
+      "tbsp fish sauce"
+     ],
+     [
+      2,
+      "tbsp peanuts"
+     ]
+    ],
+    "st": [
+     [
+      "Soak the noodles in hot water until soft.",
+      8
+     ],
+     [
+      "Stir-fry the prawns until pink.",
+      4
+     ],
+     [
+      "Push aside, scramble the eggs, then add the noodles and fish sauce.",
+      4
+     ],
+     [
+      "Serve topped with crushed peanuts."
+     ]
+    ]
+   }
+  },
+  {
+   "id": 29,
+   "title": "Black bean burrito bowl",
+   "time": 25,
+   "difficulty": "Easy",
+   "diet": [
+    "Vegetarian",
+    "Vegan",
+    "Gluten-free"
+   ],
+   "cuisine": "Mexican",
+   "ingredients": [
+    "rice",
+    "black beans",
+    "avocado",
+    "tomato",
+    "lime"
+   ],
+   "img": "images/29.jpg",
+   "type": "Dinner",
+   "details": {
+    "s": 2,
+    "n": [
+     440,
+     17,
+     66
+    ],
+    "i": [
+     [
+      1,
+      "cup|s rice"
+     ],
+     [
+      1,
+      "can black beans"
+     ],
+     [
+      1,
+      "avocado|s"
+     ],
+     [
+      2,
+      "tomato|es"
+     ],
+     [
+      1,
+      "lime|s"
+     ]
+    ],
+    "st": [
+     [
+      "Cook the rice.",
+      15
+     ],
+     [
+      "Warm the black beans with a pinch of cumin.",
+      5
+     ],
+     [
+      "Dice the tomatoes and avocado."
+     ],
+     [
+      "Build the bowls and squeeze lime over the top."
+     ]
+    ]
+   }
+  },
+  {
+   "id": 30,
+   "title": "Pumpkin soup",
+   "time": 35,
+   "difficulty": "Easy",
+   "diet": [
+    "Vegetarian",
+    "Vegan",
+    "Gluten-free"
+   ],
+   "cuisine": "British",
+   "ingredients": [
+    "pumpkin",
+    "onion",
+    "garlic",
+    "vegetable stock",
+    "coconut milk"
+   ],
+   "img": "images/30.jpg",
+   "type": "Dinner",
+   "details": {
+    "s": 4,
+    "n": [
+     210,
+     4,
+     36
+    ],
+    "i": [
+     [
+      800,
+      "g pumpkin"
+     ],
+     [
+      1,
+      "onion|s"
+     ],
+     [
+      2,
+      "garlic clove|s"
+     ],
+     [
+      500,
+      "ml vegetable stock"
+     ],
+     [
+      200,
+      "ml coconut milk"
+     ]
+    ],
+    "st": [
+     [
+      "Soften the onion and garlic.",
+      5
+     ],
+     [
+      "Add the cubed pumpkin and stock and simmer until tender.",
+      20
+     ],
+     [
+      "Blend with the coconut milk until smooth."
+     ],
+     [
+      "Season and serve hot."
+     ]
+    ]
+   }
+  },
+  {
+   "id": 31,
+   "title": "Palak paneer",
+   "time": 35,
+   "difficulty": "Medium",
+   "diet": [
+    "Vegetarian",
+    "Gluten-free"
+   ],
+   "cuisine": "Indian",
+   "ingredients": [
+    "spinach",
+    "paneer",
+    "onion",
+    "tomato",
+    "garlic"
+   ],
+   "img": "images/31.jpg",
+   "type": "Dinner",
+   "details": {
+    "s": 4,
+    "n": [
+     380,
+     19,
+     16
+    ],
+    "i": [
+     [
+      400,
+      "g spinach"
+     ],
+     [
+      250,
+      "g paneer"
+     ],
+     [
+      1,
+      "onion|s"
+     ],
+     [
+      2,
+      "tomato|es"
+     ],
+     [
+      2,
+      "garlic clove|s"
+     ]
+    ],
+    "st": [
+     [
+      "Blanch the spinach and blend it to a pur\u00e9e.",
+      4
+     ],
+     [
+      "Fry the onion, garlic and tomatoes with garam masala.",
+      10
+     ],
+     [
+      "Stir in the spinach pur\u00e9e and the cubed paneer."
+     ],
+     [
+      "Simmer gently and serve with rice or naan.",
+      8
+     ]
+    ]
+   }
+  },
+  {
+   "id": 32,
+   "title": "French toast",
+   "time": 15,
+   "difficulty": "Easy",
+   "diet": [
+    "Vegetarian"
+   ],
+   "cuisine": "American",
+   "ingredients": [
+    "bread",
+    "egg",
+    "milk",
+    "butter"
+   ],
+   "img": "images/8.jpg",
+   "type": "Breakfast",
+   "details": {
+    "s": 2,
+    "n": [
+     400,
+     15,
+     46
+    ],
+    "i": [
+     [
+      4,
+      "slice|s bread"
+     ],
+     [
+      2,
+      "egg|s"
+     ],
+     [
+      100,
+      "ml milk"
+     ],
+     [
+      1,
+      "tbsp butter"
+     ]
+    ],
+    "st": [
+     [
+      "Whisk the eggs and milk with a pinch of cinnamon."
+     ],
+     [
+      "Dip each slice of bread in the mixture."
+     ],
+     [
+      "Fry in butter until golden on both sides.",
+      6
+     ],
+     [
+      "Serve with fruit or syrup."
+     ]
+    ]
+   }
+  },
+  {
+   "id": 33,
+   "title": "Lemon garlic prawns",
+   "time": 15,
+   "difficulty": "Easy",
+   "diet": [
+    "Gluten-free"
+   ],
+   "cuisine": "Spanish",
+   "ingredients": [
+    "prawns",
+    "garlic",
+    "lemon",
+    "olive oil",
+    "parsley"
+   ],
+   "img": "images/28.jpg",
+   "type": "Dinner",
+   "details": {
+    "s": 2,
+    "n": [
+     260,
+     30,
+     6
+    ],
+    "i": [
+     [
+      300,
+      "g prawns"
+     ],
+     [
+      4,
+      "garlic clove|s"
+     ],
+     [
+      1,
+      "lemon|s"
+     ],
+     [
+      2,
+      "tbsp olive oil"
+     ],
+     [
+      0,
+      "Fresh parsley"
+     ]
+    ],
+    "st": [
+     [
+      "Warm the oil and sliced garlic gently.",
+      2
+     ],
+     [
+      "Add the prawns and cook until pink.",
+      4
+     ],
+     [
+      "Squeeze in the lemon juice."
+     ],
+     [
+      "Scatter with parsley and serve with bread."
+     ]
+    ]
+   }
+  },
+  {
+   "id": 34,
+   "title": "Chicken noodle soup",
+   "time": 40,
+   "difficulty": "Easy",
+   "diet": [],
+   "cuisine": "British",
+   "ingredients": [
+    "chicken",
+    "egg noodles",
+    "carrot",
+    "onion",
+    "chicken stock"
+   ],
+   "img": "images/5.jpg",
+   "type": "Dinner",
+   "details": {
+    "s": 4,
+    "n": [
+     320,
+     28,
+     30
+    ],
+    "i": [
+     [
+      2,
+      "chicken breast|s"
+     ],
+     [
+      150,
+      "g egg noodles"
+     ],
+     [
+      2,
+      "carrot|s"
+     ],
+     [
+      1,
+      "onion|s"
+     ],
+     [
+      1,
+      "litre chicken stock"
+     ]
+    ],
+    "st": [
+     [
+      "Simmer the chicken in the stock with the onion and carrots.",
+      20
+     ],
+     [
+      "Lift out the chicken and shred it."
+     ],
+     [
+      "Add the noodles and cook.",
+      5
+     ],
+     [
+      "Return the chicken, season and serve."
+     ]
+    ]
+   }
+  },
+  {
+   "id": 35,
+   "title": "Caprese salad",
+   "time": 10,
+   "difficulty": "Easy",
+   "diet": [
+    "Vegetarian",
+    "Gluten-free"
+   ],
+   "cuisine": "Italian",
+   "ingredients": [
+    "tomato",
+    "mozzarella",
+    "basil",
+    "olive oil",
+    "balsamic vinegar"
+   ],
+   "img": "images/35.jpg",
+   "type": "Lunch",
+   "details": {
+    "s": 2,
+    "n": [
+     320,
+     18,
+     8
+    ],
+    "i": [
+     [
+      3,
+      "tomato|es"
+     ],
+     [
+      200,
+      "g mozzarella"
+     ],
+     [
+      0,
+      "Fresh basil"
+     ],
+     [
+      2,
+      "tbsp olive oil"
+     ],
+     [
+      0,
+      "Balsamic vinegar"
+     ]
+    ],
+    "st": [
+     [
+      "Slice the tomatoes and mozzarella."
+     ],
+     [
+      "Arrange them in overlapping layers."
+     ],
+     [
+      "Tuck in the basil leaves."
+     ],
+     [
+      "Drizzle with oil and balsamic vinegar."
+     ]
+    ]
+   }
+  },
+  {
+   "id": 36,
+   "title": "Overnight oats",
+   "time": 10,
+   "difficulty": "Easy",
+   "diet": [
+    "Vegetarian"
+   ],
+   "cuisine": "American",
+   "ingredients": [
+    "oats",
+    "milk",
+    "banana",
+    "honey"
+   ],
+   "img": "images/19.jpg",
+   "type": "Breakfast",
+   "details": {
+    "s": 2,
+    "n": [
+     330,
+     12,
+     52
+    ],
+    "i": [
+     [
+      1,
+      "cup|s oats"
+     ],
+     [
+      1,
+      "cup|s milk"
+     ],
+     [
+      1,
+      "banana|s"
+     ],
+     [
+      1,
+      "tbsp honey"
+     ]
+    ],
+    "st": [
+     [
+      "Mix the oats, milk and honey in a jar."
+     ],
+     [
+      "Cover and chill overnight."
+     ],
+     [
+      "Slice the banana on top."
+     ],
+     [
+      "Serve cold or warm it briefly."
+     ]
+    ]
+   }
+  }
+ ]
 }

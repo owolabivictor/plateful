@@ -1,139 +1,120 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <link rel="icon" href="logo.svg" type="image/svg+xml" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/shared.css" />
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="icon" href="logo.svg" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/shared.css">
     <title>Favorites · Plateful</title>
     <style>
-      .top {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 1rem;
-        flex-wrap: wrap;
-        margin-bottom: 1.5rem;
-      }
-      .top h1 {
-        font-size: 2rem;
-        font-weight: 700;
-      }
-      .top small {
-        color: var(--muted);
-        font-size: 1rem;
-        margin-left: 0.8rem;
-      }
-      .filters {
-        display: flex;
-        gap: 0.6rem;
-      }
-      .filters .chip {
-        cursor: pointer;
-        font: inherit;
-        transition:
-          background 0.2s,
-          color 0.2s;
-      }
-      .filters .chip:hover {
-        border-color: var(--primary);
-      }
-      .filters .chip.on {
-        background: var(--primary);
-        color: #fff;
-        border-color: var(--primary);
-      }
-      .grid {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1.4rem;
-      }
-      .grid > .card,
-      .grid > article {
-        flex: 1 1 260px;
-        max-width: 340px;
-      }
-      .card.out {
-        opacity: 0;
-        transform: scale(0.95);
-      }
-      .empty {
-        flex: 1 1 100%;
-        max-width: none;
-        text-align: center;
-        padding: 3rem 1rem;
-        background: #fff;
-        border: 1px dashed var(--border);
-        border-radius: var(--radius);
-        color: var(--muted);
-      }
-      .empty a {
-        color: var(--primary);
-        text-decoration: underline;
-      }
+        .top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem
+        }
+
+        .top h1 {
+            font-size: 2rem;
+            font-weight: 700
+        }
+
+        .top small {
+            color: var(--muted);
+            font-size: 1rem;
+            margin-left: .8rem
+        }
+
+        .filters {
+            display: flex;
+            gap: .6rem
+        }
+
+        .filters .chip {
+            cursor: pointer;
+            font: inherit;
+            transition: background .2s, color .2s
+        }
+
+        .filters .chip:hover {
+            border-color: var(--primary)
+        }
+
+        .filters .chip.on {
+            background: var(--primary);
+            color: #fff;
+            border-color: var(--primary)
+        }
+
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.4rem
+        }
+
+        .grid>.card,
+        .grid>article {
+            flex: 1 1 260px;
+            max-width: 340px
+        }
+
+        .card.out {
+            opacity: 0;
+            transform: scale(.95)
+        }
+
+        .empty {
+            flex: 1 1 100%;
+            max-width: none;
+            text-align: center;
+            padding: 3rem 1rem;
+            background: #fff;
+            border: 1px dashed var(--border);
+            border-radius: var(--radius);
+            color: var(--muted)
+        }
+
+        .empty a {
+            color: var(--primary);
+            text-decoration: underline
+        }
     </style>
-  </head>
-  <body>
+</head>
+
+<body>
     <div id="nav"></div>
     <main class="wrap">
-      <div class="top">
-        <h1>Saved recipes<small id="count"></small></h1>
-        <div class="filters" role="group" aria-label="Filter saved recipes">
-          <button class="chip on" data-f="all">All</button
-          ><button class="chip" data-f="dinner">Dinner</button
-          ><button class="chip" data-f="quick">Quick</button>
+        <div class="top">
+            <h1>Saved recipes<small id="count"></small></h1>
+            <div class="filters" role="group" aria-label="Filter saved recipes"><button class="chip on"
+                    data-f="all">All</button><button class="chip" data-f="dinner">Dinner</button><button class="chip"
+                    data-f="quick">Quick</button></div>
         </div>
-      </div>
-      <section class="grid" id="grid" aria-live="polite"></section>
+        <section class="grid" id="grid" aria-live="polite"></section>
     </main>
     <script src="js/data.js"></script>
     <script src="js/modal.js"></script>
     <script>
-      document.getElementById("nav").innerHTML = NAV("favorites");
-      ready.then(() => {
-        const $ = (id) => document.getElementById(id);
-        let f = "all";
-        const pass = (r) =>
-          f === "all" ||
-          (f === "dinner" && r.type === "Dinner") ||
-          (f === "quick" && r.time <= 20);
-        function render() {
-          const all = Favs.list().map(byId).filter(Boolean),
-            list = all.filter(pass);
-          $("count").textContent = all.length + " saved";
-          $("grid").innerHTML = list.length
-            ? list
-                .map(
-                  (r) =>
-                    `<article class="card"><a href="recipe.html?id=${r.id}" data-open="${r.id}"><div class="img" style="background:${r.img}"></div><div class="body"><h3>${r.title}</h3><div class="meta">${r.time} min <span class="tag ${r.difficulty}">${r.difficulty}</span></div></div></a><button class="heart on" data-id="${r.id}" aria-label="Remove ${r.title} from favorites">♥</button></article>`,
-                )
-                .join("")
-            : `<div class="empty">${all.length ? "No saved recipes match this filter." : 'Nothing saved yet. <a href="search.html">Find a recipe</a> and tap the heart.'}</div>`;
-        }
-        $("grid").onclick = (e) => {
-          const b = e.target.closest(".heart");
-          if (!b) return;
-          Favs.toggle(b.dataset.id);
-          const c = b.closest(".card");
-          c.classList.add("out");
-          setTimeout(render, 200);
-        };
-        document.querySelector(".filters").onclick = (e) => {
-          const b = e.target.closest(".chip");
-          if (!b) return;
-          f = b.dataset.f;
-          document
-            .querySelectorAll(".filters .chip")
-            .forEach((x) => x.classList.toggle("on", x === b));
-          render();
-        };
-        render();
-        addEventListener("rf:favs", render);
-      });
+        document.getElementById("nav").innerHTML = NAV("favorites"); ready.then(() => {
+            const $ = id => document.getElementById(id); let f = "all";
+            const pass = r => f === "all" || (f === "dinner" && r.type === "Dinner") || (f === "quick" && r.time <= 20);
+            function render() {
+                const all = Favs.list().map(byId).filter(Boolean), list = all.filter(pass);
+                $("count").textContent = all.length + " saved";
+                $("grid").innerHTML = list.length ? list.map(r => `<article class="card"><a href="recipe.html?id=${r.id}" data-open="${r.id}"><div class="img" style="background:${r.img}"></div><div class="body"><h3>${r.title}</h3><div class="meta">${r.time} min <span class="tag ${r.difficulty}">${r.difficulty}</span></div></div></a><button class="heart on" data-id="${r.id}" aria-label="Remove ${r.title} from favorites">♥</button></article>`).join("") :
+                    `<div class="empty">${all.length ? "No saved recipes match this filter." : 'Nothing saved yet. <a href="search.html">Find a recipe</a> and tap the heart.'}</div>`;
+            }
+            $("grid").onclick = e => { const b = e.target.closest(".heart"); if (!b) return; Favs.toggle(b.dataset.id); const c = b.closest(".card"); c.classList.add("out"); setTimeout(render, 200) };
+            document.querySelector(".filters").onclick = e => { const b = e.target.closest(".chip"); if (!b) return; f = b.dataset.f; document.querySelectorAll(".filters .chip").forEach(x => x.classList.toggle("on", x === b)); render() };
+            render();
+            addEventListener("rf:favs", render);
+        });
     </script>
-  </body>
+</body>
+
 </html>
